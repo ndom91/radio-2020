@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
-import Post from "../components/post";
+import Hero from "../components/Hero";
+import "../styles/Home.module.css";
 
 const client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -10,6 +10,7 @@ const client = require("contentful").createClient({
 function HomePage() {
   async function fetchEntries() {
     const entries = await client.getEntries();
+    console.log(entries);
     if (entries.items) return entries.items;
     console.log(`Error getting Entries for ${contentType.name}.`);
   }
@@ -26,26 +27,10 @@ function HomePage() {
 
   return (
     <>
-      <Head>
-        <title>Next.js + Contentful</title>
-        <link
-          rel="stylesheet"
-          href="https://css.zeit.sh/v1.css"
-          type="text/css"
-        />
-      </Head>
-      {posts.length > 0
-        ? posts.map((p) => (
-            <Post
-              alt={p.fields.alt}
-              date={p.fields.date}
-              key={p.fields.title}
-              image={p.fields.image}
-              title={p.fields.title}
-              url={p.fields.url}
-            />
-          ))
-        : null}
+      <div className="container">
+        <Hero />
+        Test!
+      </div>
     </>
   );
 }
