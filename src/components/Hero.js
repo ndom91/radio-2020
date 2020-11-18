@@ -1,15 +1,27 @@
 import React from "react";
+import Image from "next/image";
 
 const Hero = () => {
   return (
     <div>
       <section class="text-gray-500 body-font">
         <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-            <img
-              class="object-cover object-center rounded"
+          <div
+            class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+            style={{ transformStyle: "preserve-3d", perspective: "400px" }}
+          >
+            <Image
+              class="object-cover object-center rounded rotateY-17"
               alt="hero"
-              src="https://dummyimage.com/720x600"
+              layout="intrinsic"
+              priority
+              width="480"
+              height="600"
+              src="/jleuchters-transparent.png"
+              style={{
+                transform: "rotate3d(0, 0, 0, 60deg)",
+                perspective: "600px",
+              }}
             />
           </div>
           <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">

@@ -3,3 +3,9 @@
 @import "tailwindcss/utilities";
 
 @import "./globals.css";
+
+@layer utilities {
+  .rotateY-17 {
+    transform: rotateY(17deg);
+  }
+}

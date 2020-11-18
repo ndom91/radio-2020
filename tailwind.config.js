@@ -11,6 +11,10 @@ module.exports = {
         "newtelco-500": "#67B246",
         "newtelco-600": "#57963b",
       },
+      rotate: {
+        z60: "rotate3d(0, 1, 0, 60deg)",
+        y30: "rotateY(-30deg)",
+      },
     },
   },
   variants: {},

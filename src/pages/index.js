@@ -3,6 +3,9 @@ import SEO from "../components/SEO";
 import Hero from "../components/Hero";
 import Header from "../components/Header";
 import Features from "../components/Features";
+import Steps from "../components/Steps";
+import Contact from "../components/Contact2";
+import Footer from "../components/Footer";
 
 const client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -30,6 +33,9 @@ function HomePage() {
       <Header />
       <Hero />
       <Features />
+      <Steps />
+      <Contact />
+      <Footer />
     </>
   );
 }
