@@ -4,114 +4,77 @@ const Features = () => {
   return (
     <section class="text-gray-500 body-font">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-col">
-          <div class="h-1  rounded overflow-hidden">
-            <div class="w-24 h-full bg-newtelco-500"></div>
-          </div>
-          <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12">
-            <h1 class="sm:w-2/5 text-white font-medium title-font text-2xl mb-2 sm:mb-0">
+        <div class="flex flex-wrap w-full mb-20">
+          <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
               Features
             </h1>
-            <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">
-              Street art subway tile salvia four dollar toast bitters selfies
-              quinoa yuccie synth meditation iPhone intelligentsia prism tofu.
-              Viral gochujang bitters dreamcatcher.
-            </p>
+            <div class="h-1 w-20 bg-newtelco-500 rounded"></div>
           </div>
+          <p class="lg:w-1/2 w-full leading-relaxed text-base">
+            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
+            gentrify, subway tile poke farm-to-table. Franzen you probably
+            haven't heard of them man bun deep jianbing selfies heirloom prism
+            food truck ugh squid celiac humblebrag.
+          </p>
         </div>
-        <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4">
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
+        <div class="flex flex-wrap -m-4">
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="bg-gray-700 p-6 rounded-lg">
               <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://dummyimage.com/720x400"
                 alt="content"
-                class="object-cover object-center h-full w-full"
-                src="https://dummyimage.com/1203x503"
               />
+              <h3 class="tracking-widest text-newtelco-500 text-xs font-medium title-font">
+                SUBTITLE
+              </h3>
+              <h2 class="text-lg text-white font-medium title-font mb-4">
+                Chichen Itza
+              </h2>
+              <p class="leading-relaxed text-base">
+                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                hexagon disrupt edison bulbche.
+              </p>
             </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">
-              Shooting Stars
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Swag shoindxgoitch literally meditation subway tile tumblr
-              cold-pressed. Gastropub street art beard dreamcatcher neutra,
-              ethical XOXO lumbersexual.
-            </p>
-            <a class="text-newtelco-500 inline-flex items-center mt-3">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="bg-gray-700 p-6 rounded-lg">
               <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://dummyimage.com/721x401"
                 alt="content"
-                class="object-cover object-center h-full w-full"
-                src="https://dummyimage.com/1204x504"
               />
+              <h3 class="tracking-widest text-newtelco-500 text-xs font-medium title-font">
+                SUBTITLE
+              </h3>
+              <h2 class="text-lg text-white font-medium title-font mb-4">
+                Colosseum Roma
+              </h2>
+              <p class="leading-relaxed text-base">
+                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                hexagon disrupt edison bulbche.
+              </p>
             </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">
-              The Catalyzer
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Swag shoindxigoitch literally meditation subway tile tumblr
-              cold-pressed. Gastropub street art beard dreamcatcher neutra,
-              ethical XOXO lumbersexual.
-            </p>
-            <a class="text-newtelco-500 inline-flex items-center mt-3">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
-          <div class="p-4 md:w-1/3 sm:mb-0 mb-6">
-            <div class="rounded-lg h-64 overflow-hidden">
+          <div class="xl:w-1/3 md:w-1/2 p-4">
+            <div class="bg-gray-700 p-6 rounded-lg">
               <img
+                class="h-40 rounded w-full object-cover object-center mb-6"
+                src="https://dummyimage.com/722x402"
                 alt="content"
-                class="object-cover object-center h-full w-full"
-                src="https://dummyimage.com/1205x505"
               />
+              <h3 class="tracking-widest text-newtelco-500 text-xs font-medium title-font">
+                SUBTITLE
+              </h3>
+              <h2 class="text-lg text-white font-medium title-font mb-4">
+                Great Pyramid of Giza
+              </h2>
+              <p class="leading-relaxed text-base">
+                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
+                hexagon disrupt edison bulbche.
+              </p>
             </div>
-            <h2 class="text-xl font-medium title-font text-white mt-5">
-              The 400 Blows
-            </h2>
-            <p class="text-base leading-relaxed mt-2">
-              Swag shoindegoitch literally meditation subway tile tumblr
-              cold-pressed. Gastropub street art beard dreamcatcher neutra,
-              ethical XOXO lumbersexual.
-            </p>
-            <a class="text-newtelco-500 inline-flex items-center mt-3">
-              Learn More
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                class="w-4 h-4 ml-2"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7"></path>
-              </svg>
-            </a>
           </div>
         </div>
       </div>

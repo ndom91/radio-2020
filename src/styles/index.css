@@ -8,4 +8,7 @@
   .rotateY-17 {
     transform: rotateY(17deg);
   }
+  .filter-jens {
+    filter: saturate(0.9) contrast(1.3);
+  }
 }
