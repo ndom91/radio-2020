@@ -18,7 +18,7 @@ const Hero = () => {
     async function getFields() {
       const heroItems = await fetchHero();
       console.log(heroItems);
-      heroItems.fields && setHeroText(heroItems.fields);
+      heroItems.title && setHeroText(heroItems);
     }
     getFields();
   }, []);
@@ -26,13 +26,13 @@ const Hero = () => {
   return (
     <div>
       <section class="text-gray-500 body-font">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+        <div class="container mx-auto flex px-5 pt-24 md:flex-row flex-col items-center">
           <div
-            class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0"
+            class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 translateY-jens"
             style={{ transformStyle: "preserve-3d", perspective: "400px" }}
           >
             <Image
-              class="object-cover object-center rounded filter-jens"
+              class="object-cover object-center rounded filter-jens translateY-jens  motion-safe:animate-fadeIn"
               alt="hero"
               layout="intrinsic"
               priority
@@ -43,11 +43,11 @@ const Hero = () => {
             />
           </div>
           <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            <h1 class="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
               {heroText.title}
             </h1>
             <p class="mb-8 leading-relaxed">{heroText.subtitle}</p>
-            <div class="flex w-full md:justify-start justify-center items-end">
+            {/* <div class="flex w-full md:justify-start justify-center items-end">
               <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
                 <label for="hero-field" class="leading-7 text-sm text-gray-400">
                   Email
@@ -59,15 +59,39 @@ const Hero = () => {
                   class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
-              <button class="inline-flex text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out">
+            </div> */}
+            {/* <p class="text-sm mt-2 text-gray-700 mb-2 w-full">
+              {heroText.heroWarning}
+            </p> */}
+            <a
+              href="mailto:sales@newtelco.de?cc=jleuchters@newtelco.de&?subject=Habe%20von%20Ihnen%20bei%20HR%20gehoert!%20Koennen%20Sie%20uns%20helfen%3F&body=Hi%20Team%2C%0D%0A%0D%0A..."
+              alt="Mail To sales@newtelco.de"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button class="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out">
                 {heroText.ctaButton1}
               </button>
-            </div>
-            <p class="text-sm mt-2 text-gray-600 mb-8 w-full">
-              {heroText.heroWarning}
-            </p>
+            </a>
           </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <defs>
+            <linearGradient id="gradient" gradientTransform="rotate(90)">
+              <stop offset="5%" stop-color="#0e0e0e" />
+              <stop offset="35%" stop-color="#181818" stop-opacity="0.5" />
+              <stop offset="95%" stop-color="#222222" stop-opacity="0.0" />
+            </linearGradient>
+          </defs>
+          {/* <path
+            fill="url(#gradient)"
+            d="M0,256L21.8,245.3C43.6,235,87,213,131,181.3C174.5,149,218,107,262,90.7C305.5,75,349,85,393,106.7C436.4,128,480,160,524,165.3C567.3,171,611,149,655,133.3C698.2,117,742,107,785,112C829.1,117,873,139,916,170.7C960,203,1004,245,1047,256C1090.9,267,1135,245,1178,202.7C1221.8,160,1265,96,1309,101.3C1352.7,107,1396,181,1418,218.7L1440,256L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
+          ></path> */}
+          <path
+            fill="url(#gradient)"
+            d="M0,160L26.7,160C53.3,160,107,160,160,176C213.3,192,267,224,320,229.3C373.3,235,427,213,480,181.3C533.3,149,587,107,640,112C693.3,117,747,171,800,208C853.3,245,907,267,960,240C1013.3,213,1067,139,1120,138.7C1173.3,139,1227,213,1280,250.7C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
+          ></path>
+        </svg>
       </section>
     </div>
   );

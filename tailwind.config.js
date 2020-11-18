@@ -7,6 +7,15 @@ module.exports = {
   purge: ["./src/**/*.js", "./src/**/*.jsx"],
   theme: {
     extend: {
+      animation: {
+        fadeIn: "fadeIn 450ms ease-in-out forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0, transform: "translateX(-100px)" },
+          "100%": { opacity: 1, transform: "translateX(0)" },
+        },
+      },
       colors: {
         "newtelco-500": "#67B246",
         "newtelco-600": "#57963b",
@@ -28,6 +37,6 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: { animation: ["motion-safe"] },
   plugins: [],
 };
