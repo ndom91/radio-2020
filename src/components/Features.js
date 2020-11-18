@@ -6,7 +6,7 @@ const client = require("contentful").createClient({
 });
 
 const Features = () => {
-  const [features, setFeatures] = useState({});
+  const [features, setFeatures] = useState([]);
   async function fetchFeatures() {
     const entries = await client.getEntry("32jrBqN5HwaXxvwaYIff0Y");
     // console.log(entries);
@@ -41,7 +41,7 @@ const Features = () => {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          {features &&
+          {Array.isArray(features) &&
             features
               .sort((a, b) => {
                 return a.fields.order - b.fields.order;
