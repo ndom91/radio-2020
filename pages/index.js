@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Hero from "../components/Hero";
-import "../styles/Home.module.css";
 
 const client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -9,18 +8,20 @@ const client = require("contentful").createClient({
 
 function HomePage() {
   async function fetchEntries() {
-    const entries = await client.getEntries();
+    const entries = await client.getEntry("4NtJeBncecmyvJi4OrY0w");
     console.log(entries);
-    if (entries.items) return entries.items;
-    console.log(`Error getting Entries for ${contentType.name}.`);
+    // console.log(entries.toPlainObject());
+    if (entries.fields) return entries.fields;
+    console.log(`Error getting Entries for ${entries.sys.type}.`);
   }
 
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
+    // fetchEntries();
     async function getPosts() {
-      const allPosts = await fetchEntries();
-      setPosts([...allPosts]);
+      await fetchEntries();
+      // setPosts([...allPosts]);
     }
     getPosts();
   }, []);
