@@ -1,10 +1,20 @@
-# Newtelco 2020 Radio Ad Landing Page
+# 📻 Newtelco 2020 HR-Radio - Landingpage
 
-> Demo: https://radio.newtelco.de
+> https://radio.newtelco.de
 
-## Getting Started
+![Screenshot1](https://imgur.com/YWG6PkI.png)
 
-First, run the development server:
+## 🚀 Getting Started
+
+First, install the dependencies:
+
+```bash
+npm install
+# or
+yarn
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -12,8 +22,8 @@ npm run dev
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then you can open [http://localhost:3000](http://localhost:3000).
 
-## License
+## 📝 License
 
 MIT
