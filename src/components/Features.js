@@ -1,6 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+const client = require("contentful").createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
+});
 
 const Features = () => {
+  const [features, setFeatures] = useState({});
+  async function fetchFeatures() {
+    const entries = await client.getEntry("32jrBqN5HwaXxvwaYIff0Y");
+    // console.log(entries);
+    if (entries.fields) return entries.toPlainObject();
+    console.log(`Error getting Entries for ${entries.sys.type}.`);
+  }
+
+  useEffect(() => {
+    async function getFields() {
+      const feat = await fetchFeatures();
+      // console.log(feat);
+      setFeatures(feat.fields.features);
+    }
+    getFields();
+  }, []);
+
   return (
     <section className="text-gray-500 body-font">
       <div className="container px-5 py-24 mx-auto">
@@ -19,63 +41,35 @@ const Features = () => {
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
-          <div className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="bg-gray-700 p-6 rounded-lg">
-              <img
-                className="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/720x400"
-                alt="content"
-              />
-              <h3 className="tracking-widest text-newtelco-500 text-xs font-medium title-font">
-                SUBTITLE
-              </h3>
-              <h2 className="text-lg text-white font-medium title-font mb-4">
-                Chichen Itza
-              </h2>
-              <p className="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
-              </p>
-            </div>
-          </div>
-          <div className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="bg-gray-700 p-6 rounded-lg">
-              <img
-                className="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/721x401"
-                alt="content"
-              />
-              <h3 className="tracking-widest text-newtelco-500 text-xs font-medium title-font">
-                SUBTITLE
-              </h3>
-              <h2 className="text-lg text-white font-medium title-font mb-4">
-                Colosseum Roma
-              </h2>
-              <p className="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
-              </p>
-            </div>
-          </div>
-          <div className="xl:w-1/3 md:w-1/2 p-4">
-            <div className="bg-gray-700 p-6 rounded-lg">
-              <img
-                className="h-40 rounded w-full object-cover object-center mb-6"
-                src="https://dummyimage.com/722x402"
-                alt="content"
-              />
-              <h3 className="tracking-widest text-newtelco-500 text-xs font-medium title-font">
-                SUBTITLE
-              </h3>
-              <h2 className="text-lg text-white font-medium title-font mb-4">
-                Great Pyramid of Giza
-              </h2>
-              <p className="leading-relaxed text-base">
-                Fingerstache flexitarian street art 8-bit waistcoat. Distillery
-                hexagon disrupt edison bulbche.
-              </p>
-            </div>
-          </div>
+          {features &&
+            features
+              .sort((a, b) => {
+                return a.fields.order - b.fields.order;
+              })
+              .map((feature) => {
+                console.log(feature);
+                return (
+                  <div className="xl:w-1/3 md:w-1/2 p-4">
+                    <div className="bg-gray-700 p-6 rounded-lg">
+                      <img
+                        className="h-40 rounded w-full object-cover object-center mb-6"
+                        src={feature.fields?.image.fields.file.url || ""}
+                        alt="content"
+                      />
+                      <h3 className="tracking-widest text-newtelco-500 text-xs font-medium title-font">
+                        SUBTITLE
+                      </h3>
+                      <h2 className="text-lg text-white font-medium title-font mb-4">
+                        {feature.fields.title}
+                      </h2>
+                      <p className="leading-relaxed text-base">
+                        Fingerstache flexitarian street art 8-bit waistcoat.
+                        Distillery hexagon disrupt edison bulbche.
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
         </div>
       </div>
     </section>
