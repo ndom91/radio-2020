@@ -28,7 +28,7 @@ function HomePage() {
 
   return (
     <>
-      <div className="container">
+      <div className="container font-mono">
         <Hero />
         Test!
       </div>
