@@ -17,7 +17,7 @@ const Features = () => {
   useEffect(() => {
     async function getFields() {
       const feat = await fetchFeatures();
-      // console.log(feat);
+      console.log(feat.fields.features);
       setFeatures(feat.fields.features);
     }
     getFields();
@@ -53,7 +53,7 @@ const Features = () => {
                     <div className="bg-gray-700 p-6 rounded-lg">
                       <img
                         className="h-40 rounded w-full object-cover object-center mb-6"
-                        src={feature.fields?.image.fields.file.url || ""}
+                        src={feature.fields?.image?.fields?.file?.url}
                         alt="content"
                       />
                       <h3 className="tracking-widest text-newtelco-500 text-xs font-medium title-font">
