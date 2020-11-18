@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import React, { useEffect, useState } from "react"
+import Image from "next/image"
 
 const client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
-});
+})
 
 const Hero = () => {
-  const [heroText, setHeroText] = useState({});
+  const [heroText, setHeroText] = useState({})
   async function fetchHero() {
-    const entries = await client.getEntry("4NtJeBncecmyvJi4OrY0w");
-    if (entries.fields) return entries.fields;
-    console.log(`Error getting Entries for ${entries.sys.type}.`);
+    const entries = await client.getEntry("4NtJeBncecmyvJi4OrY0w")
+    if (entries.fields) return entries.fields
+    console.log(`Error getting Entries for ${entries.sys.type}.`)
   }
 
   useEffect(() => {
     async function getFields() {
-      const heroItems = await fetchHero();
-      console.log(heroItems);
-      heroItems.title && setHeroText(heroItems);
+      const heroItems = await fetchHero()
+      console.log(heroItems)
+      heroItems.title && setHeroText(heroItems)
     }
-    getFields();
-  }, []);
+    getFields()
+  }, [])
 
   return (
     <div>
       <section className="text-gray-500 body-font">
-        <div className="container mx-auto flex px-5 pt-24 md:flex-row flex-col items-center">
+        <div className="container mx-auto mb-20 flex px-5 pt-24 md:flex-row flex-col items-center">
           <div
             className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 translateY-jens"
             style={{ transformStyle: "preserve-3d", perspective: "400px" }}
@@ -59,7 +59,7 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <svg
+        {/* <svg
           className="hidden md:block"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
@@ -75,10 +75,10 @@ const Hero = () => {
             fill="url(#gradient)"
             d="M0,160L26.7,160C53.3,160,107,160,160,176C213.3,192,267,224,320,229.3C373.3,235,427,213,480,181.3C533.3,149,587,107,640,112C693.3,117,747,171,800,208C853.3,245,907,267,960,240C1013.3,213,1067,139,1120,138.7C1173.3,139,1227,213,1280,250.7C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
           ></path>
-        </svg>
+        </svg> */}
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

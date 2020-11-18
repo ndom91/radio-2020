@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from "react"
+import Image from "next/image"
 
 const Header = () => {
   return (
@@ -33,7 +33,7 @@ const Header = () => {
         </a>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
