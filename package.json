@@ -1,11 +1,17 @@
 {
-  "name": "my-nextjs-contentful-project",
-  "version": "0.1.0",
-  "private": true,
+  "name": "newtelco-2020-radio",
+  "version": "0.0.4",
+  "author": "Nico Domino <ndomino@newtelco.de>",
+  "description": "NewTelco 2020 HR Radio Ad Landingpage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ndom91/radio-2020.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "precommit": "lint-staged"
   },
   "dependencies": {
     "contentful": "^7.14.13",
@@ -14,7 +20,12 @@
     "react-dom": "17.0.1"
   },
   "devDependencies": {
+    "lint-staged": "^10.5.1",
     "postcss-preset-env": "^6.7.0",
+    "prettier-standard": "^16.4.1",
     "tailwindcss": "^1.9.6"
+  },
+  "lint-staged": {
+    "*": ["prettier-standard --lint"]
   }
 }
