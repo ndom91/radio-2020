@@ -13,7 +13,7 @@ const Header = () => {
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
         <a href="https://newtelco.com">
-          <button className="inline-flex items-center bg-newtelco-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 transition transition-colors duration-200 ease-in-out rounded text-base mt-4 md:mt-0">
+          <button className="inline-flex items-center bg-newtelco-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 transition transition-colors duration-200 ease-in-out rounded text-base mt-4 md:mt-0 hidden md:inline-flex ">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

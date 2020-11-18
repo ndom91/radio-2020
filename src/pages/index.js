@@ -8,13 +8,17 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
 function HomePage() {
-  const streamUrl = "/radioSpot.mp3";
+  const streamUrl = "radioSpot.mp3";
   return (
     <>
       <SEO title="Newtelco Radio" />
       <Header />
       <Hero />
-      <Player streamUrl={streamUrl} />
+      <Player
+        streamUrl={streamUrl}
+        preloadType="auto"
+        trackTitle="Newtelco HR Radio Spot"
+      />
       <Features />
       <Steps />
       <Contact />

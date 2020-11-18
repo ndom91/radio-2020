@@ -15,3 +15,17 @@
     transform: translateY(6px);
   }
 }
+
+.rhap_container {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.rhap_play-pause-button {
+  color: #67b246 !important;
+}
+
+.rhap_progress-indicator,
+.rhap_volume-indicator {
+  background: #67b246 !important;
+}

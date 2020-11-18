@@ -47,22 +47,6 @@ const Hero = () => {
               {heroText.title}
             </h1>
             <p className="mb-8 leading-relaxed">{heroText.subtitle}</p>
-            {/* <div className="flex w-full md:justify-start justify-center items-end">
-              <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
-                <label for="hero-field" className="leading-7 text-sm text-gray-400">
-                  Email
-                </label>
-                <input
-                  type="text"
-                  id="hero-field"
-                  name="hero-field"
-                  className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                />
-              </div>
-            </div> */}
-            {/* <p className="text-sm mt-2 text-gray-700 mb-2 w-full">
-              {heroText.heroWarning}
-            </p> */}
             <a
               href="mailto:sales@newtelco.de?cc=jleuchters@newtelco.de&?subject=Habe%20von%20Ihnen%20bei%20HR%20gehoert!%20Koennen%20Sie%20uns%20helfen%3F&body=Hi%20Team%2C%0D%0A%0D%0A..."
               alt="Mail To sales@newtelco.de"
@@ -75,7 +59,11 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg
+          className="hidden md:block"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1440 320"
+        >
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
               <stop offset="5%" stopColor="#0e0e0e" />
@@ -83,10 +71,6 @@ const Hero = () => {
               <stop offset="95%" stopColor="#222222" stopOpacity="0.0" />
             </linearGradient>
           </defs>
-          {/* <path
-            fill="url(#gradient)"
-            d="M0,256L21.8,245.3C43.6,235,87,213,131,181.3C174.5,149,218,107,262,90.7C305.5,75,349,85,393,106.7C436.4,128,480,160,524,165.3C567.3,171,611,149,655,133.3C698.2,117,742,107,785,112C829.1,117,873,139,916,170.7C960,203,1004,245,1047,256C1090.9,267,1135,245,1178,202.7C1221.8,160,1265,96,1309,101.3C1352.7,107,1396,181,1418,218.7L1440,256L1440,0L1418.2,0C1396.4,0,1353,0,1309,0C1265.5,0,1222,0,1178,0C1134.5,0,1091,0,1047,0C1003.6,0,960,0,916,0C872.7,0,829,0,785,0C741.8,0,698,0,655,0C610.9,0,567,0,524,0C480,0,436,0,393,0C349.1,0,305,0,262,0C218.2,0,175,0,131,0C87.3,0,44,0,22,0L0,0Z"
-          ></path> */}
           <path
             fill="url(#gradient)"
             d="M0,160L26.7,160C53.3,160,107,160,160,176C213.3,192,267,224,320,229.3C373.3,235,427,213,480,181.3C533.3,149,587,107,640,112C693.3,117,747,171,800,208C853.3,245,907,267,960,240C1013.3,213,1067,139,1120,138.7C1173.3,139,1227,213,1280,250.7C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"

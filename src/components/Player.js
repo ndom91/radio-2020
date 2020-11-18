@@ -1,27 +1,29 @@
 import React from "react";
-import { PlayButton, Timer } from "react-soundplayer/components";
-import { withCustomAudio } from "react-soundplayer/addons";
+import AudioPlayer, { RHAP_UI } from "react-h5-audio-player";
+import "react-h5-audio-player/lib/styles.css";
 
-const Player = ({ streamUrl }) => {
-  const trackTitle = "Newtelco HR Radio Spot";
+const Player = ({ streamUrl, trackTitle }) => {
   return (
-    <div className="p-4 mb-3 mt-1 flex justify-between text-white bg-gray-700 rounded-md w-1/3 m-auto shadow-lg-green">
-      <PlayButton
-        className="h-5 w-5 mr-4"
-        onPlayClick={() => {
-          console.log("play button clicked!");
-        }}
-        trackTitle={trackTitle}
-        streamUrl={streamUrl}
-      />
-      <h2 className="custom-player-title">{trackTitle}</h2>
-      <Timer
-        className="custom-player-timer"
-        streamUrl={streamUrl}
-        trackTitle={trackTitle}
-      />
+    <div className="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-4">
+        <h2 class="text-xs text-newtelco-500 tracking-widest font-medium title-font mb-1">
+          HR + NEWTELCO
+        </h2>
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">
+          Listen to the Spot
+        </h1>
+      </div>
+      <div className="p-4 mb-3 mt-1 flex justify-between text-white bg-gray-700 rounded-md w-5/6 md:w-2/3 lg:w-1/3 m-auto ">
+        <AudioPlayer
+          src={streamUrl}
+          customAdditionalControls={[]}
+          customProgressBarSection={[RHAP_UI.PROGRESS_BAR]}
+          onPlay={(e) => console.log("onPlay")}
+          // other props here
+        />
+      </div>
     </div>
   );
 };
 
-export default withCustomAudio(Player);
+export default Player;
