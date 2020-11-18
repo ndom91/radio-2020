@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from "react"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -7,9 +8,31 @@ import Steps from "../components/Steps"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Banner from "../components/Banner"
+import { useCookie } from "react-use"
 
 function HomePage() {
   const streamUrl = "radioSpot.mp3"
+  const [value, updateCookie, deleteCookie] = useCookie("gdpr-banner-dev")
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (value && JSON.parse(value)) {
+      value.accepted === true
+      // load GA
+    } else {
+      setOpen(true)
+    }
+  }, [])
+
+  const hideBanner = (choice) => {
+    if (choice === "accept") {
+      updateCookie(JSON.stringify({ accepted: true }))
+    } else if (choice === "decline") {
+      updateCookie(JSON.stringify({ accepted: false }))
+    }
+    setOpen(false)
+  }
+
   return (
     <>
       <SEO title="Newtelco Radio" />
@@ -24,7 +47,7 @@ function HomePage() {
       <Steps />
       <Contact />
       <Footer />
-      <Banner />
+      {open && <Banner hide={hideBanner} />}
     </>
   )
 }
