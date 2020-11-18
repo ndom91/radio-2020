@@ -3,17 +3,17 @@ import Image from "next/image";
 
 const Header = () => {
   return (
-    <header class="text-gray-500 body-font">
-      <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+    <header className="text-gray-500 body-font">
+      <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
             <Image src="/nt-white.png" height="32" width="32" layout="fixed" />
           </div>
-          <span class="ml-3 text-xl">NewTelco GmbH</span>
+          <span className="ml-3 text-xl">NewTelco GmbH</span>
         </a>
-        <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
+        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center"></nav>
         <a href="https://newtelco.com">
-          <button class="inline-flex items-center bg-newtelco-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 transition transition-colors duration-200 ease-in-out rounded text-base mt-4 md:mt-0">
+          <button className="inline-flex items-center bg-newtelco-500 text-white border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 transition transition-colors duration-200 ease-in-out rounded text-base mt-4 md:mt-0">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"

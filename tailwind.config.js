@@ -16,6 +16,9 @@ module.exports = {
           "100%": { opacity: 1, transform: "translateX(0)" },
         },
       },
+      boxShadow: {
+        "lg-green": "0 10px 15px -2px rgba(103, 178, 70, 0.1)",
+      },
       colors: {
         "newtelco-500": "#67B246",
         "newtelco-600": "#57963b",

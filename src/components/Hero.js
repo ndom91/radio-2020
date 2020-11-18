@@ -25,14 +25,14 @@ const Hero = () => {
 
   return (
     <div>
-      <section class="text-gray-500 body-font">
-        <div class="container mx-auto flex px-5 pt-24 md:flex-row flex-col items-center">
+      <section className="text-gray-500 body-font">
+        <div className="container mx-auto flex px-5 pt-24 md:flex-row flex-col items-center">
           <div
-            class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 translateY-jens"
+            className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 translateY-jens"
             style={{ transformStyle: "preserve-3d", perspective: "400px" }}
           >
             <Image
-              class="object-cover object-center rounded filter-jens translateY-jens  motion-safe:animate-fadeIn"
+              className="object-cover object-center rounded filter-jens translateY-jens  motion-safe:animate-fadeIn"
               alt="hero"
               layout="intrinsic"
               priority
@@ -42,25 +42,25 @@ const Hero = () => {
               // src="/jleuchters.jpg"
             />
           </div>
-          <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 class="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
+          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+            <h1 className="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
               {heroText.title}
             </h1>
-            <p class="mb-8 leading-relaxed">{heroText.subtitle}</p>
-            {/* <div class="flex w-full md:justify-start justify-center items-end">
-              <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
-                <label for="hero-field" class="leading-7 text-sm text-gray-400">
+            <p className="mb-8 leading-relaxed">{heroText.subtitle}</p>
+            {/* <div className="flex w-full md:justify-start justify-center items-end">
+              <div className="relative mr-4 lg:w-full xl:w-1/2 w-2/4">
+                <label for="hero-field" className="leading-7 text-sm text-gray-400">
                   Email
                 </label>
                 <input
                   type="text"
                   id="hero-field"
                   name="hero-field"
-                  class="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                  className="w-full bg-gray-800 rounded border border-gray-700 focus:border-green-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
                 />
               </div>
             </div> */}
-            {/* <p class="text-sm mt-2 text-gray-700 mb-2 w-full">
+            {/* <p className="text-sm mt-2 text-gray-700 mb-2 w-full">
               {heroText.heroWarning}
             </p> */}
             <a
@@ -69,7 +69,7 @@ const Hero = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button class="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out">
+              <button className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out">
                 {heroText.ctaButton1}
               </button>
             </a>
@@ -78,9 +78,9 @@ const Hero = () => {
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <defs>
             <linearGradient id="gradient" gradientTransform="rotate(90)">
-              <stop offset="5%" stop-color="#0e0e0e" />
-              <stop offset="35%" stop-color="#181818" stop-opacity="0.5" />
-              <stop offset="95%" stop-color="#222222" stop-opacity="0.0" />
+              <stop offset="5%" stopColor="#0e0e0e" />
+              <stop offset="35%" stopColor="#181818" stopOpacity="0.5" />
+              <stop offset="95%" stopColor="#222222" stopOpacity="0.0" />
             </linearGradient>
           </defs>
           {/* <path
