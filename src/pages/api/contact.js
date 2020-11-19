@@ -18,6 +18,7 @@ export default (req, res) => {
             to: [
               { email: "marketing@newtelco.de" },
               { email: "jleuchters@newtelco.de" },
+              { email: "ndomino@newtelco.de" },
             ],
             dynamic_template_data: {
               name: data.name,
