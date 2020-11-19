@@ -37,6 +37,7 @@ function HomePage() {
     <>
       <SEO title="Newtelco Radio" />
       <Header />
+      {open && <Banner hide={hideBanner} />}
       <Hero />
       <Player
         streamUrl={streamUrl}
@@ -47,7 +48,6 @@ function HomePage() {
       <Steps />
       <Contact />
       <Footer />
-      {open && <Banner hide={hideBanner} />}
     </>
   )
 }

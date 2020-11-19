@@ -52,8 +52,12 @@ const Hero = () => {
               alt="Mail To sales@newtelco.de"
               target="_blank"
               rel="noopener noreferrer"
+              className="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-50 rounded"
             >
-              <button className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out">
+              <button
+                className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring      focus:ring-white focus:ring-opacity-50"
+                tabIndex="-1"
+              >
                 {heroText.ctaButton1}
               </button>
             </a>
