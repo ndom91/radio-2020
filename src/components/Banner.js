@@ -23,15 +23,17 @@ const Banner = ({ hide }) => {
                 />
               </svg>
             </span>
-            <p className="ml-3 font-medium text-white truncate">
-              <span className="md:hidden">We use cookies. Is that okay?</span>
+            <p className="ml-3 font-medium text-white ">
+              <span className="md:hidden">
+                Wir benutzen Cookies. Sind sie damit einverstanden?
+              </span>
               <span className="hidden md:inline">
                 Wir benutzen Cookies um die Erfahrung der Benutzer zu
                 verbessern.
               </span>
             </p>
           </div>
-          <div className="order-3 w-full sm:w-1/3 flex justify-end">
+          <div className="order-5 w-full sm:order-3 sm:w-1/3 flex justify-start sm:justify-end">
             <div className="order-3 mt-2 flex-shrink-0 mr-2 sm:order-2 sm:mt-0 sm:w-auto">
               <button
                 className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-indigo-50 focus:outline-none focus:ring  focus:ring-newtelco-600 focus:ring-opacity-70"
@@ -49,7 +51,7 @@ const Banner = ({ hide }) => {
               </button>
             </div>
           </div>
-          <div className="order-5 flex-shrink-0 sm:order-3 sm:ml-3">
+          <div className="order-4 flex-shrink-0 sm:order-3 sm:ml-3">
             <button
               type="button"
               className="-mr-1 flex p-2 rounded-md hover:bg-newtelco-600 focus:outline-none focus:ring focus:ring-white focus:ring-opacity-50 sm:-mr-2 transition transition-colors duration-300 ease-in-out"
