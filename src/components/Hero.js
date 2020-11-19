@@ -55,10 +55,10 @@ const Hero = () => {
               alt="Mail To sales@newtelco.de"
               target="_blank"
               rel="noopener noreferrer"
-              className="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-50 rounded"
+              className="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
             >
               <button
-                className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring      focus:ring-white focus:ring-opacity-50"
+                className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out"
                 tabIndex="-1"
               >
                 {heroText.ctaButton1}
@@ -66,23 +66,6 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        {/* <svg
-          className="hidden md:block"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 1440 320"
-        >
-          <defs>
-            <linearGradient id="gradient" gradientTransform="rotate(90)">
-              <stop offset="5%" stopColor="#0e0e0e" />
-              <stop offset="35%" stopColor="#181818" stopOpacity="0.5" />
-              <stop offset="95%" stopColor="#222222" stopOpacity="0.0" />
-            </linearGradient>
-          </defs>
-          <path
-            fill="url(#gradient)"
-            d="M0,160L26.7,160C53.3,160,107,160,160,176C213.3,192,267,224,320,229.3C373.3,235,427,213,480,181.3C533.3,149,587,107,640,112C693.3,117,747,171,800,208C853.3,245,907,267,960,240C1013.3,213,1067,139,1120,138.7C1173.3,139,1227,213,1280,250.7C1333.3,288,1387,288,1413,288L1440,288L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
-          ></path>
-        </svg> */}
       </section>
     </div>
   )

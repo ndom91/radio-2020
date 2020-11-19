@@ -15,7 +15,7 @@ const Footer = () => {
           © 2020
           <a
             href="https://github.com/newtelco/radio-2020"
-            className="text-gray-800 ml-1"
+            className="text-gray-800 ml-1 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -24,7 +24,7 @@ const Footer = () => {
         </p>
         <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
           <a
-            className="text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out"
+            className="text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://www.facebook.com/Newtelco/"
           >
             <svg
@@ -39,7 +39,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out"
+            className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://twitter.com/newtelcoDE"
           >
             <svg
@@ -54,7 +54,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out"
+            className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://www.instagram.com/newtelcode/"
           >
             <svg
@@ -71,7 +71,7 @@ const Footer = () => {
             </svg>
           </a>
           <a
-            className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out"
+            className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://www.linkedin.com/company/newtelco"
           >
             <svg

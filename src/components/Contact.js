@@ -22,25 +22,44 @@ const Contact = () => {
               <h2 className="title-font font-medium text-white tracking-widest text-sm">
                 ADRESSE
               </h2>
-              <p className="leading-relaxed">
-                Moenchhofstr. 24
-                <br />
-                60326 Frankfurt am Main
-                <br />
-                Germany
-              </p>
+              <a
+                href="https://g.page/Newtelco?share"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <p className="leading-relaxed">
+                  Moenchhofstr. 24
+                  <br />
+                  60326 Frankfurt am Main
+                  <br />
+                  Germany
+                </p>
+              </a>
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-medium text-white tracking-widest text-sm">
                 EMAIL
               </h2>
-              <a className="text-newtelco-500 leading-relaxed">
+              <a
+                href="mailto:sales@newtelco.de"
+                className="text-newtelco-500 leading-relaxed"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 sales@newtelco.de
               </a>
               <h2 className="title-font font-medium text-white tracking-widest text-sm mt-4">
                 TELEFON
               </h2>
-              <p className="leading-relaxed">+49 69 75 00 27 0</p>
+              <p className="leading-relaxed">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="tel:0049697500270"
+                >
+                  +49 69 75 00 27 0
+                </a>
+              </p>
             </div>
           </div>
         </div>
@@ -59,7 +78,7 @@ const Contact = () => {
               type="text"
               id="name"
               name="name"
-              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors"
             />
           </div>
           <div className="relative mb-4">
@@ -70,7 +89,7 @@ const Contact = () => {
               type="email"
               id="email"
               name="email"
-              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors"
             />
           </div>
           <div className="relative mb-4">
@@ -81,7 +100,7 @@ const Contact = () => {
               type="tel"
               id="telefon"
               name="telefon"
-              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors"
             />
           </div>
           <div className="relative mb-4">
@@ -94,15 +113,27 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+              className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors"
             ></textarea>
           </div>
-          <button className="text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg">
+          <button className="text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors">
             Send
           </button>
           <p className="text-xs text-gray-500 mt-3">
-            Chicharrones blog helvetica normcore iceland tousled brook viral
-            artisan.
+            <input
+              type="checkbox"
+              className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none  focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
+            />
+            Ich bin mit den{" "}
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
+            >
+              AGB's
+            </a>{" "}
+            einverstanden.
           </p>
         </div>
       </div>
