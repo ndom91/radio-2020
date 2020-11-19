@@ -22,6 +22,7 @@ module.exports = {
       colors: {
         "newtelco-500": "#67B246",
         "newtelco-600": "#57963b",
+        "newtelco-700": "#467a30",
         gray: {
           100: "#f6f6f6",
           200: "#e4e4e4",
@@ -42,4 +43,4 @@ module.exports = {
   },
   variants: { animation: ["motion-safe"] },
   plugins: [],
-};
+}

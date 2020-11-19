@@ -36,16 +36,14 @@ const Banner = ({ hide }) => {
               <button
                 className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-indigo-50 focus:outline-none focus:ring  focus:ring-newtelco-600 focus:ring-opacity-70"
                 onClick={() => hide("accept")}
-                // tabIndex={1}
               >
                 Zustimmen
               </button>
             </div>
             <div className="order-4 mt-2 flex-shrink-0 sm:order-3 sm:mt-0 sm:w-auto">
               <button
-                className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-100 bg-newtelco-600 hover:bg-indigo-50 focus:outline-none focus:ring      focus:ring-white focus:ring-opacity-50"
+                className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-gray-100 bg-newtelco-600 hover:bg-newtelco-700 focus:outline-none focus:ring      focus:ring-white focus:ring-opacity-50"
                 onClick={() => hide("decline")}
-                // tabIndex={2}
               >
                 Ablehnen
               </button>

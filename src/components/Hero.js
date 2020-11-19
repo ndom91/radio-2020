@@ -27,22 +27,25 @@ const Hero = () => {
     <div>
       <section className="text-gray-500 body-font">
         <div className="container mx-auto mb-20 flex px-5 pt-24 md:flex-row flex-col items-center">
-          <div
-            className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 translateY-jens"
-            style={{ transformStyle: "preserve-3d", perspective: "400px" }}
-          >
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mx-auto relative">
             <Image
-              className="object-cover object-center rounded filter-jens translateY-jens  motion-safe:animate-fadeIn"
+              className="object-cover object-center rounded filter-jens   motion-safe:animate-fadeIn"
               alt="hero"
               layout="intrinsic"
               priority
               width="480"
               height="600"
               src="/jleuchters-transparent.png"
-              // src="/jleuchters.jpg"
             />
+            <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div>
+            <div className="mt-4 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
+              <h2 className="text-3xl text-gray-200 font-normal">
+                Jens Leuchters
+              </h2>
+              <h4 className="text-xl text-gray-200 ">Managing Director</h4>
+            </div>
           </div>
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center mt-20 md:mt-0">
             <h1 className="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
               {heroText.title}
             </h1>
