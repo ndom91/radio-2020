@@ -207,7 +207,7 @@ const Contact = () => {
                   type="checkbox"
                   checked={agbAgree}
                   onChange={() => setAgbAgree(!agbAgree)}
-                  className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none  focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
+                  className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
                 />
                 Ich bin mit den{" "}
                 <a

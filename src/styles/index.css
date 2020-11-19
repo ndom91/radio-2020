@@ -29,3 +29,8 @@
 .rhap_volume-indicator {
   background: #67b246 !important;
 }
+
+#__next,
+body {
+  overflow-x: hidden;
+}

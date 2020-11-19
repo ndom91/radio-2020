@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <div>
       <section className="text-gray-500 body-font">
-        <div className="container mx-auto mb-20 flex px-5 pt-24 md:flex-row flex-col items-center">
+        <div className="container mx-auto mb-20 flex px-5 pt-4 md:pt-24 md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mx-auto relative">
             <Image
               className="object-cover object-center rounded filter-jens   motion-safe:animate-fadeIn"

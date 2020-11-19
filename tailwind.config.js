@@ -40,6 +40,9 @@ module.exports = {
           900: "#0d0d0d",
         },
       },
+      width: {
+        120: "120vw",
+      },
       rotate: {
         z60: "rotate3d(0, 1, 0, 60deg)",
         y30: "rotateY(-30deg)",
