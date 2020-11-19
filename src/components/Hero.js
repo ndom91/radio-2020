@@ -48,7 +48,7 @@ const Hero = () => {
             </h1>
             <p className="mb-8 leading-relaxed">{heroText.subtitle}</p>
             <a
-              href="mailto:sales@newtelco.de?cc=jleuchters@newtelco.de&?subject=Habe%20von%20Ihnen%20bei%20HR%20gehoert!%20Koennen%20Sie%20uns%20helfen%3F&body=Hi%20Team%2C%0D%0A%0D%0A..."
+              href="mailto:sales@newtelco.de?cc=jleuchters@newtelco.de&subject=Habe%20von%20Ihnen%20bei%20HR%20gehoert!%20Koennen%20Sie%20uns%20helfen%3F&body=Hi%20Team%2C%0D%0A%0D%0A..."
               alt="Mail To sales@newtelco.de"
               target="_blank"
               rel="noopener noreferrer"
