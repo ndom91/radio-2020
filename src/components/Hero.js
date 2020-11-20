@@ -49,6 +49,7 @@ const Hero = () => {
               alt="hero"
               layout="intrinsic"
               priority
+              loading="eager"
               width="480"
               height="600"
               src="/img/jleuchters-transparent.webp"

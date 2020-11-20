@@ -20,7 +20,7 @@ const write = async (cells) => {
   return 0
 }
 
-export default (req, res) => {
+export default function handler(req, res) {
   if (req.method === "POST") {
     const data = req.body.formData
 
@@ -35,7 +35,7 @@ export default (req, res) => {
 
     const api = "https://api.sendgrid.com/v3/mail/send"
 
-    fetch(api, {
+    return fetch(api, {
       method: "post",
       headers: {
         Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
@@ -64,12 +64,14 @@ export default (req, res) => {
       }),
     }).then((resp) => {
       if (resp.status === 202) {
-        res.status(200).json({ code: 200, value: "successfully sent" })
+        return res.status(200).json({ code: 200, value: "successfully sent" })
       } else {
-        res.status(500).json({ code: 500, value: "error sending to SendGrid" })
+        return res
+          .status(500)
+          .json({ code: 500, value: "error sending to SendGrid" })
       }
     })
   } else {
-    res.status(500).json({ code: 500, value: "method not supported" })
+    return res.status(500).json({ code: 500, value: "method not supported" })
   }
 }

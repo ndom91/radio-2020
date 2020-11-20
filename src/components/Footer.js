@@ -7,11 +7,11 @@ const Footer = () => {
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a
           href="#"
-          className="flex title-font font-medium items-center md:justify-start justify-center text-white"
+          className="flex title-font font-medium items-center md:justify-start justify-center text-white focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
         >
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
             <Image
-              src="/img/nt-white.png"
+              src="/img/nt-white.webp"
               height="32"
               width="32"
               layout="fixed"

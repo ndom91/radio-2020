@@ -1,10 +1,15 @@
-import React, { useState } from "react"
+import React, { useRef, useState } from "react"
 import Image from "next/image"
+import { useClickAway } from "react-use"
 import Alert from "./Alert"
 
 const ContactModal = ({ toggleModal }) => {
   const [agbAgree, setAgbAgree] = useState(false)
   const [openSentAlert, setOpenSentAlert] = useState(false)
+  const modalRef = useRef(null)
+  useClickAway(modalRef, () => {
+    toggleModal(false)
+  })
   const [alert, setAlert] = useState({
     title: "",
     body: "",
@@ -45,6 +50,7 @@ const ContactModal = ({ toggleModal }) => {
         .then((res) => res.json())
         .then((data) => {
           if (data.code === 200) {
+            showAlert("Success", "Info successfully sent")
             setFormData({
               name: "",
               email: "",
@@ -52,19 +58,24 @@ const ContactModal = ({ toggleModal }) => {
               msg: "",
             })
             toggleModal(false)
-            showAlert("Success", "Info successfully sent")
           } else {
             showAlert("Error", "Info unsuccessfully sent")
           }
         })
     } else {
-      showAlert("AGB", "Sie muessen zuerst die AGB's annehmen.")
+      showAlert(
+        "Datenschutz",
+        "Sie müssen zuerst die Datenschutzrichtlinien zustimmen."
+      )
     }
   }
 
   return (
     <section className="text-gray-500 body-font fixed z-50 top-0 left-0 w-full h-full items-center justify-center flex motion-safe:animate-fade bg-gray-900 bg-opacity-40">
-      <div className="w-5/6 lg:w-2/3 md:w-1/2 h-auto container mx-auto flex bg-gray-300 rounded-lg justify-center relative shadow-2xl max-w-screen-md">
+      <div
+        className="w-5/6 lg:w-2/3 md:w-1/2 h-auto container mx-auto flex bg-gray-300 rounded-lg justify-center relative shadow-2xl max-w-screen-md"
+        ref={modalRef}
+      >
         <button
           className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-gray-600 text-sm z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
           onClick={() => toggleModal(false)}
@@ -83,7 +94,7 @@ const ContactModal = ({ toggleModal }) => {
         <div className="flex md:ml-auto w-full ">
           <div className="w-1/2 bg-gray-200 p-12 rounded-l-lg hidden lg:flex flex-col justify-around">
             <Image
-              src="/img/newtelco_logo.png"
+              src="/img/newtelco_logo.webp"
               height="63"
               width="512"
               layout="intrinsic"
@@ -91,7 +102,7 @@ const ContactModal = ({ toggleModal }) => {
               style={{ maxWidth: "276px" }}
             />
             <Image
-              src="/img/servers.png"
+              src="/img/servers.webp"
               height="437"
               width="400"
               layout="intrinsic"

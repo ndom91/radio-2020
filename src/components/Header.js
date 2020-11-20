@@ -7,11 +7,11 @@ const Header = () => {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <a
           href="#"
-          className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+          className="flex title-font font-medium items-center text-white mb-4 md:mb-0 focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
         >
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
             <Image
-              src="/img/nt-white.png"
+              src="/img/nt-white.webp"
               height="32"
               width="32"
               layout="fixed"
