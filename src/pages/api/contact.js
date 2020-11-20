@@ -25,6 +25,8 @@ export default (req, res) => {
   if (req.method === "POST") {
     const data = req.body.formData
 
+    console.log(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL)
+    console.log(data.name)
     write([
       {
         name: data.name,
@@ -33,6 +35,7 @@ export default (req, res) => {
         message: data.msg,
       },
     ])
+    console.log(data.email)
 
     const api = "https://api.sendgrid.com/v3/mail/send"
 
