@@ -118,7 +118,7 @@ const Contact = () => {
                   href="tel:0049697500270"
                   className="focus:outline-none font-thin focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
                 >
-                  +49 69 75 00 27 0
+                  +49 69 75 00 27 70
                 </a>
               </p>
             </div>
@@ -128,8 +128,20 @@ const Contact = () => {
           {/* <h2 className="text-white text-lg mb-1 font-medium title-font">
             KONTAKT
           </h2> */}
-          <p className="leading-relaxed mb-5 text-gray-400">
-            Erhalten Sie eine kostenlose Beratung von Jens Leuchters
+          {/* <p className="leading-relaxed mb-5 text-gray-400 text-xl uppercase font-semibold text-center">
+            Erhalten Sie eine kostenlose Beratung
+          </p> */}
+          <p className="mb-5 text-gray-400 text-center">
+            Rufen sie uns unter{" "}
+            <a
+              alt="Call Jens Leuchters"
+              href="tel:00496975002770"
+              className="text-newtelco-500"
+            >
+              069 75 00 27 70
+            </a>{" "}
+            an, oder füllen Sie das Formular aus und wir werden Sie zeitnah
+            kontaktieren!
           </p>
           <form action="/api/contact" method="post">
             <div className="relative mb-4">
@@ -220,20 +232,39 @@ const Contact = () => {
                     e.preventDefault()
                     handleSubmit()
                   }}
+                  className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-full"
+                >
+                  Absenden
+                </button>
+                {/* <button
+                  action="submit"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleSubmit()
+                  }}
                   className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 mr-2"
                 >
-                  Ich möchte Hilfe
+                  Absenden
                 </button>
+                <span
+                  style={{
+                    writingMode: "vertical-rl",
+                    textOrientation: "upright",
+                  }}
+                  className="font-thin my-auto"
+                >
+                  ODER
+                </span>
                 <button
                   action="submit"
                   onClick={(e) => {
                     e.preventDefault()
                     handleSubmit()
                   }}
-                  className="text-white bg-gray-900 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 ml-2"
+                  className="text-white bg-gray-700 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 ml-2"
                 >
-                  Rufen Sie uns an
-                </button>
+                  Rufen Sie an
+                </button> */}
               </div>
             </div>
           </form>

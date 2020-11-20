@@ -67,7 +67,7 @@ const Hero = () => {
             <h1 className="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
               {heroText.title}
             </h1>
-            <p className="mb-8 leading-relaxed">{heroText.subtitle}</p>
+            <p className="mb-8 leading-relaxed max-w-xl">{heroText.subtitle}</p>
             <button
               className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
               onClick={() => toggleModal(true)}
