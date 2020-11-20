@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react"
-import Head from "next/head"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Hero from "../components/Hero"
@@ -14,7 +13,6 @@ import { useCookie } from "react-use"
 function HomePage() {
   const streamUrl = "radioSpot.mp3"
   const [value, updateCookie, deleteCookie] = useCookie("gdpr-banner-dev")
-  const [acceptedGDPR, setAcceptedGDPR] = useState(false)
   const [open, setOpen] = useState(false)
 
   const GA4Code = `
@@ -61,20 +59,6 @@ function HomePage() {
 
   return (
     <>
-      {/* {acceptedGDPR && (
-        <Head>
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-G5PLDMEVWF"
-          ></script>
-          <script>
-            {" "}
-            window.dataLayer = window.dataLayer || []; function gtag()
-            {dataLayer.push(arguments)} gtag('js', new Date()); gtag('config',
-            'G-G5PLDMEVWF');{" "}
-          </script>
-        </Head>
-      )} */}
       <SEO title="Newtelco Radio" />
       <Header />
       {open && <Banner hide={hideBanner} />}

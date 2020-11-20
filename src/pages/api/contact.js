@@ -25,7 +25,7 @@ export default (req, res) => {
   if (req.method === "POST") {
     const data = req.body.formData
 
-    console.log(process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL)
+    console.log(process.env)
     console.log(data.name)
     write([
       {
@@ -67,6 +67,7 @@ export default (req, res) => {
         template_id: "d-700df02bfe404257861ff22464d50d2f",
       }),
     }).then((resp) => {
+      console.log("sendgrid resp", resp)
       if (resp.status === 202) {
         res.status(200).json({ code: 200, value: "successfully sent" })
       } else {
