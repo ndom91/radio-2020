@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react"
 import Head from "next/head"
 import Image from "next/image"
 import ContactModal from "./ContactModal"
-import ReactGA from "react-ga"
 import { useKeyPressEvent } from "react-use"
 
 const client = require("contentful").createClient({
@@ -31,7 +30,7 @@ const Hero = () => {
   const toggleModal = (val) => {
     setOpenModal(val)
     if (val) {
-      ReactGA.modalview("/opened-contact-us")
+      window.gtag("event", "open contact modal")
       document.body.classList.add("overflow-hidden")
     } else {
       document.body.classList.remove("overflow-hidden")

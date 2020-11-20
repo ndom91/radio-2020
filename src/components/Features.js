@@ -102,7 +102,10 @@ const Features = () => {
               })
               .map((feature) => {
                 return (
-                  <div className="p-4 md:w-1/3 sm:w-1/2 w-full">
+                  <div
+                    key={feature.fields.title}
+                    className="p-4 md:w-1/3 sm:w-1/2 w-full"
+                  >
                     <div className="border-4 border-gray-700 bg-gray-700 bg-opacity-50 px-4 py-6 rounded-lg h-full flex flex-col justify-around items-center">
                       {feature.fields.title === "24/7 Support" ? (
                         <Support />
