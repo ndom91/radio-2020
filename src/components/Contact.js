@@ -193,9 +193,10 @@ const Contact = () => {
               ></textarea>
             </div>
             <div className="relative flex flex-wrap justify-between">
-              <p className="text-xs text-gray-500">
+              <label htmlFor="agb" className="text-xs text-gray-500">
                 <input
                   type="checkbox"
+                  id="agb"
                   checked={agbAgree}
                   onChange={() => setAgbAgree(!agbAgree)}
                   className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
@@ -211,17 +212,7 @@ const Contact = () => {
                   Datenschutzrichtlinien
                 </a>{" "}
                 zu.
-                {/* Ich bin mit den{" "}
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
-                >
-                  AGB's
-                </a>{" "}
-                einverstanden. */}
-              </p>
+              </label>
               <div className="flex justify-between mt-4 w-full">
                 <button
                   action="submit"
@@ -229,20 +220,20 @@ const Contact = () => {
                     e.preventDefault()
                     handleSubmit()
                   }}
-                  className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-full"
+                  className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 mr-2"
                 >
-                  Ich möchte Hilfe, kontaktieren Sie mich
+                  Ich möchte Hilfe
                 </button>
-                {/* <button
+                <button
                   action="submit"
                   onClick={(e) => {
                     e.preventDefault()
                     handleSubmit()
                   }}
-                  className="text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 ml-2"
+                  className="text-white bg-gray-900 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 ml-2"
                 >
                   Rufen Sie uns an
-                </button> */}
+                </button>
               </div>
             </div>
           </form>

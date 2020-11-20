@@ -9,6 +9,7 @@ import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 import Banner from "../components/Banner"
 import { useCookie } from "react-use"
+import ReactGA from "react-ga"
 
 function HomePage() {
   const streamUrl = "radioSpot.mp3"
@@ -17,8 +18,12 @@ function HomePage() {
 
   useEffect(() => {
     if (value && JSON.parse(value)) {
-      value.accepted === true
-      // load GA
+      if (JSON.parse(value).accepted === true) {
+        ReactGA.initialize(process.env.GOOGLE_ANALYTICS, {
+          debug: true,
+        })
+        ReactGA.pageview(window.location.pathname + window.location.search)
+      }
     } else {
       setOpen(true)
     }

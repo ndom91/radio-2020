@@ -64,7 +64,7 @@ const ContactModal = ({ toggleModal }) => {
 
   return (
     <section className="text-gray-500 body-font fixed z-50 top-0 left-0 w-full h-full items-center justify-center flex motion-safe:animate-fade bg-gray-900 bg-opacity-40">
-      <div className="w-5/6 lg:w-2/3 md:w-1/2 md:h-5/6 lg:h-2/3 container mx-auto flex bg-gray-400 rounded-lg justify-center relative shadow-2xl max-w-screen-md">
+      <div className="w-5/6 lg:w-2/3 md:w-1/2 md:h-5/6 lg:h-3/4 container mx-auto flex bg-gray-400 rounded-lg justify-center relative shadow-2xl max-w-screen-md">
         <button
           className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-gray-600 text-sm z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
           onClick={() => toggleModal(false)}
@@ -115,7 +115,7 @@ const ContactModal = ({ toggleModal }) => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
                 />
               </div>
               <div className="relative mb-4">
@@ -131,7 +131,7 @@ const ContactModal = ({ toggleModal }) => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
                 />
               </div>
               <div className="relative mb-4">
@@ -147,7 +147,7 @@ const ContactModal = ({ toggleModal }) => {
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
                 />
               </div>
               <div className="relative mb-4">
@@ -162,38 +162,40 @@ const ContactModal = ({ toggleModal }) => {
                   name="msg"
                   value={formData.msg}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 h-24 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 h-24 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors font-thin"
                 ></textarea>
               </div>
               <div className="relative flex flex-wrap justify-between">
-                <button
-                  action="submit"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleSubmit()
-                  }}
-                  className="text-white bg-newtelco-500 border-0 py-2 px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors"
-                >
-                  Absenden
-                </button>
-                <p className="text-xs text-gray-600 my-4">
+                <label htmlFor="agb" className="text-xs text-gray-600 mb-4">
                   <input
                     type="checkbox"
+                    id="agb"
                     checked={agbAgree}
                     onChange={() => setAgbAgree(!agbAgree)}
-                    className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-0.5 bg-gray-100"
+                    className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-300"
                   />
-                  Ich bin mit den{" "}
+                  Ich erlaube NewTelco meine persönlichen Daten zu speichern und
+                  zu verarbeiten und stimme den Bestimmungen der{" "}
                   <a
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
                   >
-                    AGB's
+                    Datenschutzrichtlinien
                   </a>{" "}
-                  einverstanden.
-                </p>
+                  zu.
+                </label>
+                <button
+                  action="submit"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleSubmit()
+                  }}
+                  className="text-white bg-newtelco-500 border-0 w-full py-2 px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors"
+                >
+                  Absenden
+                </button>
               </div>
             </form>
           </div>
