@@ -32,6 +32,10 @@ function HomePage() {
   const hideBanner = (choice) => {
     if (choice === "accept") {
       updateCookie(JSON.stringify({ accepted: true }))
+      ReactGA.initialize(process.env.GOOGLE_ANALYTICS, {
+        debug: true,
+      })
+      ReactGA.pageview(window.location.pathname + window.location.search)
     } else if (choice === "decline") {
       updateCookie(JSON.stringify({ accepted: false }))
     }
