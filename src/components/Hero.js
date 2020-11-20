@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react"
+import Head from "next/head"
 import Image from "next/image"
+import ContactModal from "./ContactModal"
+import { useKeyPressEvent } from "react-use"
 
 const client = require("contentful").createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
@@ -8,6 +11,8 @@ const client = require("contentful").createClient({
 
 const Hero = () => {
   const [heroText, setHeroText] = useState({})
+  const [openModal, setOpenModal] = useState(false)
+
   async function fetchHero() {
     const entries = await client.getEntry("4NtJeBncecmyvJi4OrY0w")
     if (entries.fields) return entries.fields
@@ -22,6 +27,17 @@ const Hero = () => {
     }
     getFields()
   }, [])
+
+  const toggleModal = (val) => {
+    setOpenModal(val)
+    if (val) {
+      document.body.classList.add("overflow-hidden")
+    } else {
+      document.body.classList.remove("overflow-hidden")
+    }
+  }
+
+  useKeyPressEvent("Escape", () => toggleModal(false))
 
   return (
     <div>
@@ -50,23 +66,31 @@ const Hero = () => {
               {heroText.title}
             </h1>
             <p className="mb-8 leading-relaxed">{heroText.subtitle}</p>
-            <a
+            {/* <a
               href="mailto:sales@newtelco.de?cc=jleuchters@newtelco.de&subject=Habe%20von%20Ihnen%20bei%20HR%20gehoert!%20Koennen%20Sie%20uns%20helfen%3F&body=Hi%20Team%2C%0D%0A%0D%0A..."
               alt="Mail To sales@newtelco.de"
               target="_blank"
               rel="noopener noreferrer"
               className="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
+            > */}
+            <button
+              className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
+              onClick={() => toggleModal(true)}
             >
-              <button
-                className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out"
-                tabIndex="-1"
-              >
-                {heroText.ctaButton1}
-              </button>
-            </a>
+              {heroText.ctaButton1}
+            </button>
+            {/* </a> */}
           </div>
         </div>
       </section>
+      {openModal && (
+        <>
+          <Head>
+            <html className="overflow-hidden" />
+          </Head>
+          <ContactModal setOpenModal={toggleModal} />
+        </>
+      )}
     </div>
   )
 }

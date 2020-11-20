@@ -59,6 +59,7 @@ const Contact = () => {
       showAlert("AGB", "Sie muessen zuerst die AGB's annehmen.")
     }
   }
+
   return (
     <section className="text-gray-500 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
