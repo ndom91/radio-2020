@@ -5,6 +5,63 @@ const client = require("contentful").createClient({
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 })
 
+const Support = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    height="64"
+    width="64"
+    stroke="currentColor"
+    className="text-newtelco-500"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+    />
+  </svg>
+)
+
+const Clock = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    height="64"
+    width="64"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    className="text-newtelco-500"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+    />
+  </svg>
+)
+
+const Flexible = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    height="64"
+    width="64"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    className="text-newtelco-500"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
+    />
+  </svg>
+)
+
 const Features = () => {
   const [features, setFeatures] = useState([])
   async function fetchFeatures() {
@@ -36,8 +93,7 @@ const Features = () => {
           <p className="lg:w-1/2 w-full leading-relaxed text-base">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
             gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven't heard of them man bun deep jianbing selfies heirloom prism
-            food truck ugh squid celiac humblebrag.
+            haven't heard of them man.
           </p>
         </div>
         <div className="flex flex-wrap -m-4">
@@ -49,25 +105,20 @@ const Features = () => {
               .map((feature) => {
                 console.log(feature)
                 return (
-                  <div
-                    key={feature.fields.title}
-                    className="xl:w-1/3 md:w-1/2 p-4"
-                  >
-                    <div className="bg-gray-700 p-6 rounded-lg">
-                      <img
-                        className="h-40 rounded w-full object-cover object-center mb-6"
-                        src={feature.fields?.image?.fields?.file?.url}
-                        alt="content"
-                      />
-                      <h3 className="tracking-widest text-newtelco-500 text-xs font-medium title-font">
-                        SUBTITLE
-                      </h3>
-                      <h2 className="text-lg text-white font-medium title-font mb-4">
+                  <div className="p-4 md:w-1/3 sm:w-1/2 w-full">
+                    <div className="border-4 border-gray-700 bg-gray-700 bg-opacity-50 px-4 py-6 rounded-lg h-full flex flex-col justify-around items-center">
+                      {feature.fields.title === "24/7 Support" ? (
+                        <Support />
+                      ) : feature.fields.title === "Null Aufwand" ? (
+                        <Clock />
+                      ) : (
+                        <Flexible />
+                      )}
+                      <h2 className="title-font font-thin text-3xl text-white my-4">
                         {feature.fields.title}
                       </h2>
-                      <p className="leading-relaxed text-base">
-                        Fingerstache flexitarian street art 8-bit waistcoat.
-                        Distillery hexagon disrupt edison bulbche.
+                      <p className="leading-relaxed text-center font-medium">
+                        {feature.fields.body.content[0].content[0].value}
                       </p>
                     </div>
                   </div>

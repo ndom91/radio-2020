@@ -55,10 +55,12 @@ const Hero = () => {
             />
             <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div>
             <div className="mt-4 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
-              <h2 className="text-3xl text-gray-200 font-normal">
+              <h2 className="text-3xl text-gray-200 font-semibold">
                 Jens Leuchters
               </h2>
-              <h4 className="text-xl text-gray-200 ">Managing Director</h4>
+              <h4 className="text-xl text-gray-200 font-thin">
+                Managing Director
+              </h4>
             </div>
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center mt-20 md:mt-0">

@@ -14,7 +14,7 @@ const Footer = () => {
               layout="fixed"
             />
           </div>
-          <span className="ml-3 text-xl">NewTelco GmbH</span>
+          <span className="ml-3 text-xl font-thin">NewTelco GmbH</span>
         </a>
         <p className="text-sm text-gray-600 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-800 sm:py-2 sm:mt-0 mt-4">
           © 2020

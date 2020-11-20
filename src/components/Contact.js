@@ -87,7 +87,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
               >
-                <p className="leading-relaxed">
+                <p className="leading-relaxed font-thin">
                   Moenchhofstr. 24
                   <br />
                   60326 Frankfurt am Main
@@ -102,7 +102,7 @@ const Contact = () => {
               </h2>
               <a
                 href="mailto:sales@newtelco.de"
-                className="text-newtelco-500 leading-relaxed focus:outline-none  focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
+                className="text-newtelco-500 font-thin leading-relaxed focus:outline-none  focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -116,7 +116,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="tel:0049697500270"
-                  className="focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
+                  className="focus:outline-none font-thin focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
                 >
                   +49 69 75 00 27 0
                 </a>
@@ -124,12 +124,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="lg:w-1/3 md:w-1/2 flex flex-col md:pl-8 md:ml-auto w-full md:py-8 mt-8 md:mt-0">
-          <h2 className="text-white text-lg mb-1 font-medium title-font">
+        <div className="lg:w-1/3 md:w-1/2 flex flex-col md:pl-8 md:ml-auto w-full md:py-4 mt-8 md:mt-0">
+          {/* <h2 className="text-white text-lg mb-1 font-medium title-font">
             KONTAKT
-          </h2>
-          <p className="leading-relaxed mb-5 text-gray-600">
-            Post-ironic portland shabby chic echo park, banjo fashion axe
+          </h2> */}
+          <p className="leading-relaxed mb-5 text-gray-400">
+            Erhalten Sie eine kostenlose Beratung von Jens Leuchters
           </p>
           <form action="/api/contact" method="post">
             <div className="relative mb-4">
@@ -142,7 +142,7 @@ const Contact = () => {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors"
+                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors font-thin"
               />
             </div>
             <div className="relative mb-4">
@@ -158,7 +158,7 @@ const Contact = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors"
+                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors font-thin"
               />
             </div>
             <div className="relative mb-4">
@@ -174,7 +174,7 @@ const Contact = () => {
                 name="phone"
                 value={formData.phone}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors"
+                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors font-thin"
               />
             </div>
             <div className="relative mb-4">
@@ -189,28 +189,29 @@ const Contact = () => {
                 name="msg"
                 value={formData.msg}
                 onChange={handleChange}
-                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors"
+                className="w-full bg-gray-900 rounded border border-gray-700 focus:border-newtelco-500 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors font-thin"
               ></textarea>
             </div>
             <div className="relative flex flex-wrap justify-between">
-              <button
-                action="submit"
-                onClick={(e) => {
-                  e.preventDefault()
-                  handleSubmit()
-                }}
-                className="text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors"
-              >
-                Send
-              </button>
-              <p className="text-xs text-gray-500 mt-3">
+              <p className="text-xs text-gray-500">
                 <input
                   type="checkbox"
                   checked={agbAgree}
                   onChange={() => setAgbAgree(!agbAgree)}
                   className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-400"
                 />
-                Ich bin mit den{" "}
+                Ich erlaube NewTelco meine persönlichen Daten zu speichern und
+                zu verarbeiten und stimme den Bestimmungen der{" "}
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
+                >
+                  Datenschutzrichtlinien
+                </a>{" "}
+                zu.
+                {/* Ich bin mit den{" "}
                 <a
                   href="#"
                   target="_blank"
@@ -219,8 +220,30 @@ const Contact = () => {
                 >
                   AGB's
                 </a>{" "}
-                einverstanden.
+                einverstanden. */}
               </p>
+              <div className="flex justify-between mt-4 w-full">
+                <button
+                  action="submit"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleSubmit()
+                  }}
+                  className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-full"
+                >
+                  Ich möchte Hilfe, kontaktieren Sie mich
+                </button>
+                {/* <button
+                  action="submit"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    handleSubmit()
+                  }}
+                  className="text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 ml-2"
+                >
+                  Rufen Sie uns an
+                </button> */}
+              </div>
             </div>
           </form>
         </div>

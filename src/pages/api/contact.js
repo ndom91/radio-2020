@@ -63,7 +63,7 @@ export default (req, res) => {
       }),
     }).then((resp) => {
       if (resp.status === 202) {
-        res.status(200).json({ code: 200, value: "successfully sent " })
+        res.status(200).json({ code: 200, value: "successfully sent" })
       } else {
         res.status(500).json({ code: 500, value: "error sending to SendGrid" })
       }

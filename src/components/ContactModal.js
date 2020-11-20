@@ -98,8 +98,8 @@ const ContactModal = ({ toggleModal }) => {
             />
           </div>
           <div className="mx-auto w-5/6 p-8 lg:w-1/2 lg:p-8 flex flex-col justify-around">
-            <h2 className="text-gray-900 text-xl mb-1 font-medium title-font">
-              Kontaktieren Sie Uns!
+            <h2 className="text-gray-700 text-xl md:text-md mr-4 mb-1 font-medium title-font">
+              Erhalten Sie eine kostenlose Beratung von Jens Leuchters
             </h2>
             <form action="/api/contact" method="post">
               <div className="relative mb-4">
@@ -162,7 +162,7 @@ const ContactModal = ({ toggleModal }) => {
                   name="msg"
                   value={formData.msg}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 h-32 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 h-24 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors"
                 ></textarea>
               </div>
               <div className="relative flex flex-wrap justify-between">
@@ -172,16 +172,16 @@ const ContactModal = ({ toggleModal }) => {
                     e.preventDefault()
                     handleSubmit()
                   }}
-                  className="text-white bg-newtelco-500 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors"
+                  className="text-white bg-newtelco-500 border-0 py-2 px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors"
                 >
-                  Send
+                  Absenden
                 </button>
-                <p className="text-xs text-gray-600 mt-3">
+                <p className="text-xs text-gray-600 my-4">
                   <input
                     type="checkbox"
                     checked={agbAgree}
                     onChange={() => setAgbAgree(!agbAgree)}
-                    className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-100"
+                    className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-0.5 bg-gray-100"
                   />
                   Ich bin mit den{" "}
                   <a
