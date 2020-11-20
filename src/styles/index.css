@@ -16,6 +16,11 @@
   }
 }
 
+#__next,
+body {
+  overflow-x: hidden;
+}
+
 .rhap_container {
   background-color: transparent !important;
   box-shadow: none !important;
@@ -31,7 +36,16 @@
   background: #67b246 !important;
 }
 
-#__next,
-body {
-  overflow-x: hidden;
+.office-img {
+  transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+  filter: blur(3px) grayscale(0.8);
+  opacity: 0.8;
+  transition: 0.6s ease all;
+}
+
+.office-img-active {
+  transform: perspective(900px) rotateY(-17deg) translateY(-50px) rotateX(10deg)
+    scale(1);
+  filter: blur(0) grayscale(0.1);
+  opacity: 1;
 }

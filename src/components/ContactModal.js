@@ -51,8 +51,8 @@ const ContactModal = ({ toggleModal }) => {
               phone: "",
               msg: "",
             })
-            showAlert("Success", "Info successfully sent!")
             toggleModal(false)
+            showAlert("Success", "Info successfully sent")
           } else {
             showAlert("Error", "Info unsuccessfully sent")
           }
