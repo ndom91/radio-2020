@@ -51,7 +51,7 @@ const Hero = () => {
               priority
               width="480"
               height="600"
-              src="/img/jleuchters-transparent.png"
+              src="/img/jleuchters-transparent.webp"
             />
             <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div>
             <div className="mt-4 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">

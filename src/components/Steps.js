@@ -10,8 +10,8 @@ const Steps = () => {
   })
 
   return (
-    <section className="text-gray-500 body-font" ref={intersectionRef}>
-      <div className="container px-5 py-24 mx-auto flex flex-wrap">
+    <section className="text-gray-500 body-font">
+      <div className="container px-5 py-8 md:py-24 mx-auto flex flex-wrap">
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
             <div className="flex relative pb-12">
@@ -138,13 +138,14 @@ const Steps = () => {
             </div>
           </div>
           <img
-            className={`lg:w-1/2 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12 office-img ${
+            className={`w-full md:w-1/2 object-cover object-center rounded-lg pr-8 md:pr-0 md:mt-0 mt-48 office-img ${
               intersection && intersection.intersectionRatio
                 ? "office-img-active"
                 : ""
             }`}
-            src="/img/newtelco_office.jpg"
+            src="/img/newtelco_office.webp"
             alt="Newtelco Office"
+            ref={intersectionRef}
           />
         </div>
       </div>

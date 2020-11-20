@@ -62,7 +62,7 @@ const Contact = () => {
 
   return (
     <section className="text-gray-500 body-font relative">
-      <div className="container px-5 py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
+      <div className="container px-5 pt-12 pb-24 md:py-24 mx-auto flex sm:flex-no-wrap flex-wrap">
         <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
@@ -73,6 +73,7 @@ const Contact = () => {
             marginHeight="0"
             marginWidth="0"
             scrolling="no"
+            loading="lazy"
             src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=NewTelco+GmbH+Frankfurt&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
             style={{ filter: "grayscale(1) contrast(1.2) opacity(0.16)" }}
           ></iframe>
@@ -213,7 +214,7 @@ const Contact = () => {
                 Ich erlaube NewTelco meine persönlichen Daten zu speichern und
                 zu verarbeiten und stimme den Bestimmungen der{" "}
                 <a
-                  href="#"
+                  href="https://newtelco.com/data-privacy-policy/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"

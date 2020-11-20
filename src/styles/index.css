@@ -46,6 +46,6 @@ body {
 .office-img-active {
   transform: perspective(900px) rotateY(-17deg) translateY(-50px) rotateX(10deg)
     scale(1);
-  filter: blur(0) grayscale(0.1);
+  filter: blur(0) grayscale(0.1) contrast(1.2);
   opacity: 1;
 }

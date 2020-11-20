@@ -189,7 +189,7 @@ const ContactModal = ({ toggleModal }) => {
                   Ich erlaube NewTelco meine persönlichen Daten zu speichern und
                   zu verarbeiten und stimme den Bestimmungen der{" "}
                   <a
-                    href="#"
+                    href="https://newtelco.com/data-privacy-policy/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-newtelco-500 focus:outline-none focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 rounded underline-none hover:underline transitions-all"
