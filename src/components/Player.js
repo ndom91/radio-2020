@@ -18,7 +18,7 @@ const Player = ({ streamUrl, trackTitle }) => {
           src={streamUrl}
           customAdditionalControls={[]}
           customProgressBarSection={[RHAP_UI.PROGRESS_BAR]}
-          onPlay={(e) => console.log("onPlay")}
+          // onPlay={(e) => console.log("onPlay")}
           className="z-40 border-4 border-gray-300 rounded-md p-4"
         />
       </div>

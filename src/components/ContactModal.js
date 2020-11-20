@@ -64,7 +64,7 @@ const ContactModal = ({ toggleModal }) => {
 
   return (
     <section className="text-gray-500 body-font fixed z-50 top-0 left-0 w-full h-full items-center justify-center flex motion-safe:animate-fade bg-gray-900 bg-opacity-40">
-      <div className="w-5/6 lg:w-2/3 md:w-1/2 md:h-5/6 lg:h-3/4 container mx-auto flex bg-gray-400 rounded-lg justify-center relative shadow-2xl max-w-screen-md">
+      <div className="w-5/6 lg:w-2/3 md:w-1/2 md:h-5/6 lg:h-3/4 container mx-auto flex bg-gray-300 rounded-lg justify-center relative shadow-2xl max-w-screen-md">
         <button
           className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-gray-600 text-sm z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
           onClick={() => toggleModal(false)}
@@ -98,11 +98,23 @@ const ContactModal = ({ toggleModal }) => {
             />
           </div>
           <div className="mx-auto w-5/6 p-8 lg:w-1/2 lg:p-8 flex flex-col justify-around">
-            <h2 className="text-gray-700 text-xl md:text-md mr-4 mb-1 font-medium title-font">
+            <h2 className="text-gray-700 text-xl md:text-md mr-4 mb-3 font-semibold title-font">
               Erhalten Sie eine kostenlose Beratung von Jens Leuchters
             </h2>
+            <p className="mb-2 text-gray-700 text-center font-thin">
+              Rufen sie uns unter{" "}
+              <a
+                alt="Call Jens Leuchters"
+                href="tel:00496975002770"
+                className="text-newtelco-500 font-bold"
+              >
+                069 75 00 27 70
+              </a>{" "}
+              an, oder füllen Sie das Formular aus und wir werden Sie zeitnah
+              kontaktieren!
+            </p>
             <form action="/api/contact" method="post">
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label
                   htmlFor="name"
                   className="leading-7 text-sm text-gray-700"
@@ -118,7 +130,7 @@ const ContactModal = ({ toggleModal }) => {
                   className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
                 />
               </div>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label
                   htmlFor="email"
                   className="leading-7 text-sm text-gray-700"
@@ -134,7 +146,7 @@ const ContactModal = ({ toggleModal }) => {
                   className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
                 />
               </div>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label
                   htmlFor="email"
                   className="leading-7 text-sm text-gray-700"
@@ -150,7 +162,7 @@ const ContactModal = ({ toggleModal }) => {
                   className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
                 />
               </div>
-              <div className="relative mb-4">
+              <div className="relative mb-2">
                 <label
                   htmlFor="message"
                   className="leading-7 text-sm text-gray-700"
@@ -172,7 +184,7 @@ const ContactModal = ({ toggleModal }) => {
                     id="agb"
                     checked={agbAgree}
                     onChange={() => setAgbAgree(!agbAgree)}
-                    className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-300"
+                    className="form-checkbox h-4 w-4 rounded border-gray-300 focus:outline-none focus:ring-offset focus:ring focus:ring-newtelco-500 focus:ring-opacity-50 text-newtelco-500 mr-1 bg-gray-200"
                   />
                   Ich erlaube NewTelco meine persönlichen Daten zu speichern und
                   zu verarbeiten und stimme den Bestimmungen der{" "}

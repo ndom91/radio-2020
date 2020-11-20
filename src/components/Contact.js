@@ -125,18 +125,15 @@ const Contact = () => {
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 flex flex-col md:pl-8 md:ml-auto w-full md:py-4 mt-8 md:mt-0">
-          {/* <h2 className="text-white text-lg mb-1 font-medium title-font">
-            KONTAKT
-          </h2> */}
-          {/* <p className="leading-relaxed mb-5 text-gray-400 text-xl uppercase font-semibold text-center">
-            Erhalten Sie eine kostenlose Beratung
-          </p> */}
-          <p className="mb-5 text-gray-400 text-center">
+          <p className="leading-relaxed mb-5 text-gray-400 text-xl font-bold text-center">
+            Erhalten Sie eine kostenlose Beratung von Jens Leuchters
+          </p>
+          <p className="mb-5 text-gray-400 text-center font-thin">
             Rufen sie uns unter{" "}
             <a
               alt="Call Jens Leuchters"
               href="tel:00496975002770"
-              className="text-newtelco-500"
+              className="text-newtelco-500 font-bold"
             >
               069 75 00 27 70
             </a>{" "}
@@ -236,35 +233,6 @@ const Contact = () => {
                 >
                   Absenden
                 </button>
-                {/* <button
-                  action="submit"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleSubmit()
-                  }}
-                  className="text-white bg-newtelco-500 border-0 py-3 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 mr-2"
-                >
-                  Absenden
-                </button>
-                <span
-                  style={{
-                    writingMode: "vertical-rl",
-                    textOrientation: "upright",
-                  }}
-                  className="font-thin my-auto"
-                >
-                  ODER
-                </span>
-                <button
-                  action="submit"
-                  onClick={(e) => {
-                    e.preventDefault()
-                    handleSubmit()
-                  }}
-                  className="text-white bg-gray-700 border-0 py-2 px-6 focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors w-1/2 ml-2"
-                >
-                  Rufen Sie an
-                </button> */}
               </div>
             </div>
           </form>
