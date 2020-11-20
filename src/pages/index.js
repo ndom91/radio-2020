@@ -38,7 +38,6 @@ function HomePage() {
   useEffect(() => {
     if (value && JSON.parse(value)) {
       if (JSON.parse(value).accepted === true) {
-        // setAcceptedGDPR(true)
         setupGA()
       }
     } else {
@@ -49,7 +48,6 @@ function HomePage() {
   const hideBanner = (choice) => {
     if (choice === "accept") {
       updateCookie(JSON.stringify({ accepted: true }))
-      // setAcceptedGDPR(true)
       setupGA()
     } else if (choice === "decline") {
       updateCookie(JSON.stringify({ accepted: false }))

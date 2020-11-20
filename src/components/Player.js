@@ -22,7 +22,7 @@ const Player = ({ streamUrl, trackTitle }) => {
           className="z-40 border-4 border-gray-300 rounded-md p-4"
         />
       </div>
-      <div className="-left-4 sm:-left-6 md:-left-32 -top-1 w-120 transform -rotate-3 -skew-y-3 h-96 absolute bg-gray-700 z-auto"></div>
+      <div className="-left-4 sm:-left-6 md:-left-1/4 top-4 w-130 transform -rotate-3 -skew-y-3 h-96 absolute bg-gray-700 z-auto"></div>
     </div>
   )
 }

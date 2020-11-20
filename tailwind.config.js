@@ -41,7 +41,7 @@ module.exports = {
         },
       },
       width: {
-        120: "120vw",
+        130: "130vw",
       },
       rotate: {
         z60: "rotate3d(0, 1, 0, 60deg)",
