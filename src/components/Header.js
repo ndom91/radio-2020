@@ -5,13 +5,17 @@ const Header = () => {
   return (
     <header className="text-gray-500 body-font">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <a
+          href="#"
+          className="flex title-font font-medium items-center text-white mb-4 md:mb-0"
+        >
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
             <Image
               src="/img/nt-white.png"
               height="32"
               width="32"
               layout="fixed"
+              alt="Newtelco Logo"
             />
           </div>
           <span className="ml-3 text-xl font-thin">NewTelco GmbH</span>

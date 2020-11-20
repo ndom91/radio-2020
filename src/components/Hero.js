@@ -58,9 +58,9 @@ const Hero = () => {
               <h2 className="text-3xl text-gray-200 font-semibold">
                 Jens Leuchters
               </h2>
-              <h4 className="text-xl text-gray-200 font-thin">
+              <h3 className="text-xl text-gray-200 font-thin">
                 Managing Director
-              </h4>
+              </h3>
             </div>
           </div>
           <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center mt-20 md:mt-0">

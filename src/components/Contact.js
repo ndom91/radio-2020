@@ -173,7 +173,7 @@ const Contact = () => {
             </div>
             <div className="relative mb-4">
               <label
-                htmlFor="email"
+                htmlFor="phone"
                 className="leading-7 text-sm text-gray-400"
               >
                 Telefon
@@ -188,10 +188,7 @@ const Contact = () => {
               />
             </div>
             <div className="relative mb-4">
-              <label
-                htmlFor="message"
-                className="leading-7 text-sm text-gray-400"
-              >
+              <label htmlFor="msg" className="leading-7 text-sm text-gray-400">
                 Nachricht
               </label>
               <textarea

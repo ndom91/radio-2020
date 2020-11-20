@@ -5,13 +5,17 @@ const Footer = () => {
   return (
     <footer className="text-gray-500 bg-gray-900 body-font">
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-        <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <a
+          href="#"
+          className="flex title-font font-medium items-center md:justify-start justify-center text-white"
+        >
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
             <Image
               src="/img/nt-white.png"
               height="32"
               width="32"
               layout="fixed"
+              alt="Newtelco Logo"
             />
           </div>
           <span className="ml-3 text-xl font-thin">NewTelco GmbH</span>
@@ -31,6 +35,7 @@ const Footer = () => {
           <a
             className="text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://www.facebook.com/Newtelco/"
+            aria-label="Newtelco Facebook"
           >
             <svg
               fill="currentColor"
@@ -46,6 +51,7 @@ const Footer = () => {
           <a
             className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://twitter.com/newtelcoDE"
+            aria-label="Newtelco Twitter"
           >
             <svg
               fill="currentColor"
@@ -61,6 +67,7 @@ const Footer = () => {
           <a
             className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://www.instagram.com/newtelcode/"
+            aria-label="Newtelco Instagram"
           >
             <svg
               fill="none"
@@ -78,6 +85,7 @@ const Footer = () => {
           <a
             className="ml-3 text-gray-600 hover:text-white transition transition-colors duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
             href="https://www.linkedin.com/company/newtelco"
+            aria-label="Newtelco LinkedIn"
           >
             <svg
               fill="currentColor"

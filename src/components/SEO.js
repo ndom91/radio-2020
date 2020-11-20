@@ -1,5 +1,5 @@
-import React from "react";
-import Head from "next/head";
+import React from "react"
+import Head from "next/head"
 
 const SEO = ({ title }) => {
   return (
@@ -34,8 +34,12 @@ const SEO = ({ title }) => {
       <meta name="msapplication-TileColor" content="#333333" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#333333"></meta>
+      <meta
+        name="description"
+        content="NewTelco GmbH - HR Radio Campaign"
+      ></meta>
     </Head>
-  );
-};
+  )
+}
 
-export default SEO;
+export default SEO
