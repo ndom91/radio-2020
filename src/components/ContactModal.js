@@ -1,7 +1,8 @@
 import React, { useState } from "react"
+import Image from "next/image"
 import Alert from "./Alert"
 
-const ContactModal = ({ setOpenModal }) => {
+const ContactModal = ({ toggleModal }) => {
   const [agbAgree, setAgbAgree] = useState(false)
   const [openSentAlert, setOpenSentAlert] = useState(false)
   const [alert, setAlert] = useState({
@@ -51,6 +52,7 @@ const ContactModal = ({ setOpenModal }) => {
               msg: "",
             })
             showAlert("Success", "Info successfully sent!")
+            toggleModal(false)
           } else {
             showAlert("Error", "Info unsuccessfully sent")
           }
@@ -62,13 +64,13 @@ const ContactModal = ({ setOpenModal }) => {
 
   return (
     <section className="text-gray-500 body-font fixed z-50 top-0 left-0 w-full h-full items-center justify-center flex motion-safe:animate-fade bg-gray-900 bg-opacity-40">
-      <div className="w-5/6 lg:w-2/3 md:w-1/2 md:h-5/6 lg:h-2/3 container mx-auto flex bg-gray-400 rounded-lg justify-center relative shadow-2xl">
+      <div className="w-5/6 lg:w-2/3 md:w-1/2 md:h-5/6 lg:h-2/3 container mx-auto flex bg-gray-400 rounded-lg justify-center relative shadow-2xl max-w-screen-md">
         <button
-          className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-white text-sm z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
-          onClick={() => setOpenModal(false)}
+          className="modal-close absolute top-0 right-0 cursor-pointer flex flex-col items-center mt-4 mr-4 text-gray-600 text-sm z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
+          onClick={() => toggleModal(false)}
         >
           <svg
-            className="fill-current text-white"
+            className="fill-current text-gray-600"
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="18"
@@ -79,8 +81,23 @@ const ContactModal = ({ setOpenModal }) => {
           <span className="text-sm">(Esc)</span>
         </button>
         <div className="flex md:ml-auto w-full ">
-          <div className="w-1/2 bg-gray-200 p-4 rounded-l-lg hidden md:block"></div>
-          <div className="mx-auto w-5/6 p-8 md:w-1/2 md:p-8 flex flex-col justify-around">
+          <div className="w-1/2 bg-gray-200 p-12 rounded-l-lg hidden lg:flex flex-col justify-around">
+            <Image
+              src="/img/newtelco_logo.png"
+              height="63"
+              width="512"
+              layout="intrinsic"
+              className="max-w-md"
+              style={{ maxWidth: "276px" }}
+            />
+            <Image
+              src="/img/servers.png"
+              height="437"
+              width="400"
+              layout="intrinsic"
+            />
+          </div>
+          <div className="mx-auto w-5/6 p-8 lg:w-1/2 lg:p-8 flex flex-col justify-around">
             <h2 className="text-gray-900 text-xl mb-1 font-medium title-font">
               Kontaktieren Sie Uns!
             </h2>

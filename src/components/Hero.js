@@ -51,7 +51,7 @@ const Hero = () => {
               priority
               width="480"
               height="600"
-              src="/jleuchters-transparent.png"
+              src="/img/jleuchters-transparent.png"
             />
             <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div>
             <div className="mt-4 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
@@ -66,20 +66,12 @@ const Hero = () => {
               {heroText.title}
             </h1>
             <p className="mb-8 leading-relaxed">{heroText.subtitle}</p>
-            {/* <a
-              href="mailto:sales@newtelco.de?cc=jleuchters@newtelco.de&subject=Habe%20von%20Ihnen%20bei%20HR%20gehoert!%20Koennen%20Sie%20uns%20helfen%3F&body=Hi%20Team%2C%0D%0A%0D%0A..."
-              alt="Mail To sales@newtelco.de"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
-            > */}
             <button
               className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
               onClick={() => toggleModal(true)}
             >
               {heroText.ctaButton1}
             </button>
-            {/* </a> */}
           </div>
         </div>
       </section>
@@ -88,7 +80,7 @@ const Hero = () => {
           <Head>
             <html className="overflow-hidden" />
           </Head>
-          <ContactModal setOpenModal={toggleModal} />
+          <ContactModal toggleModal={toggleModal} />
         </>
       )}
     </div>

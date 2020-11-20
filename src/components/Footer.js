@@ -7,7 +7,12 @@ const Footer = () => {
       <div className="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
         <a className="flex title-font font-medium items-center md:justify-start justify-center text-white">
           <div className="bg-newtelco-500 rounded-full flex justify-center items-center h-10 w-10">
-            <Image src="/nt-white.png" height="32" width="32" layout="fixed" />
+            <Image
+              src="/img/nt-white.png"
+              height="32"
+              width="32"
+              layout="fixed"
+            />
           </div>
           <span className="ml-3 text-xl">NewTelco GmbH</span>
         </a>

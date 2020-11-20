@@ -1,6 +1,37 @@
+const { GoogleSpreadsheet } = require("google-spreadsheet")
+const doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREADSHEET_ID)
+
+const spreadsheetAuth = (document) => {
+  return document.useServiceAccountAuth({
+    client_email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
+    private_key: process.env.GOOGLE_PRIVATE_KEY.replace(/\\n/gm, "\n"),
+  })
+}
+
+const write = async (cells) => {
+  if (!cells || !Array.isArray(cells)) {
+    console.error("Cells should be an array!")
+  }
+
+  await spreadsheetAuth(doc)
+  await doc.loadInfo()
+  const sheet = doc.sheetsByIndex[0]
+  await sheet.addRows(cells)
+}
+
 export default (req, res) => {
   if (req.method === "POST") {
     const data = req.body.formData
+
+    write([
+      {
+        name: data.name,
+        email: data.email,
+        phone: data.phone,
+        message: data.msg,
+      },
+    ])
+
     const api = "https://api.sendgrid.com/v3/mail/send"
 
     fetch(api, {
@@ -16,8 +47,8 @@ export default (req, res) => {
         personalizations: [
           {
             to: [
-              { email: "marketing@newtelco.de" },
-              { email: "jleuchters@newtelco.de" },
+              // { email: "marketing@newtelco.de" },
+              // { email: "jleuchters@newtelco.de" },
               { email: "ndomino@newtelco.de" },
             ],
             dynamic_template_data: {
