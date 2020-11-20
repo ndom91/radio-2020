@@ -15,8 +15,10 @@ const write = async (cells) => {
 
   await spreadsheetAuth(doc)
   await doc.loadInfo()
+  console.log(doc)
   const sheet = doc.sheetsByIndex[0]
   await sheet.addRows(cells)
+  return 0
 }
 
 export default (req, res) => {
