@@ -15,7 +15,6 @@ const write = async (cells) => {
 
   await spreadsheetAuth(doc)
   await doc.loadInfo()
-  console.log(doc)
   const sheet = doc.sheetsByIndex[0]
   await sheet.addRows(cells)
   return 0
@@ -25,8 +24,6 @@ export default (req, res) => {
   if (req.method === "POST") {
     const data = req.body.formData
 
-    console.log(process.env)
-    console.log(data.name)
     write([
       {
         name: data.name,
@@ -35,7 +32,6 @@ export default (req, res) => {
         message: data.msg,
       },
     ])
-    console.log(data.email)
 
     const api = "https://api.sendgrid.com/v3/mail/send"
 
@@ -67,7 +63,6 @@ export default (req, res) => {
         template_id: "d-700df02bfe404257861ff22464d50d2f",
       }),
     }).then((resp) => {
-      console.log("sendgrid resp", resp)
       if (resp.status === 202) {
         res.status(200).json({ code: 200, value: "successfully sent" })
       } else {
