@@ -68,13 +68,13 @@ const Hero = () => {
             <h1 className="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
               {heroText.title}
             </h1>
-            <div className="mb-8 leading-relaxed max-w-xl">
-              <span className="border-b-4 border-newtelco-500">
+            <div className="mb-8 leading-relaxed max-w-2xl">
+              <div className="text-gray-400 underline-magic">
                 {heroText.subtitle && heroText.subtitle.split(".")[0]}.
-              </span>
-              <span className="mt-4">
+              </div>
+              <div className="text-gray-400 mt-2">
                 {heroText.subtitle && heroText.subtitle.split(".")[1]}
-              </span>
+              </div>
             </div>
             <button
               className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
