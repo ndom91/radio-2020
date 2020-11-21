@@ -2,7 +2,7 @@
 
 > https://radio.newtelco.de
 
-![Screenshot1](https://imgur.com/YWG6PkI.png)
+![Screenshot1](https://imgur.com/YdXQPrm.png)
 
 ## 🚀 Getting Started
 
