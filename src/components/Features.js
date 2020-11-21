@@ -84,7 +84,7 @@ const Features = () => {
         <div className="flex flex-wrap w-full mb-20 justify-end">
           <div className="lg:w-1/2 w-full mb-6 lg:mb-0 flex flex-col items-end">
             <h1 className="w-full sm:text-3xl text-2xl font-medium title-font mb-2 text-white text-right">
-              Key Benefits
+              Hauptvorteile
             </h1>
             <div className="h-1 w-20 bg-newtelco-500 rounded"></div>
           </div>
