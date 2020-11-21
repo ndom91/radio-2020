@@ -81,20 +81,15 @@ const Features = () => {
   return (
     <section className="text-gray-500 body-font">
       <div className="container px-5 py-24 mx-auto">
-        <div className="flex flex-wrap w-full mb-20">
-          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
-            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
-              Features
+        <div className="flex flex-wrap w-full mb-20 justify-end">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0 flex flex-col items-end">
+            <h1 className="w-full sm:text-3xl text-2xl font-medium title-font mb-2 text-white text-right">
+              Key Benefits
             </h1>
             <div className="h-1 w-20 bg-newtelco-500 rounded"></div>
           </div>
-          <p className="lg:w-1/2 w-full leading-relaxed text-base">
-            Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-            gentrify, subway tile poke farm-to-table. Franzen you probably
-            haven't heard of them man.
-          </p>
         </div>
-        <div className="flex flex-wrap -m-4 justify-between w-full">
+        <div className="flex flex-wrap justify-between w-full">
           {Array.isArray(features) &&
             features
               .sort((a, b) => {

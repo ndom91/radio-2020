@@ -102,12 +102,12 @@ const Contact = () => {
                 EMAIL
               </h2>
               <a
-                href="mailto:sales@newtelco.de"
+                href="mailto:marketing@newtelco.de"
                 className="text-newtelco-500 font-thin leading-relaxed focus:outline-none  focus:ring-2 focus:ring-newtelco-500 focus:ring-opacity-50 rounded"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                sales@newtelco.de
+                marketing@newtelco.de
               </a>
               <h2 className="title-font font-medium text-white tracking-widest text-sm mt-4">
                 TELEFON

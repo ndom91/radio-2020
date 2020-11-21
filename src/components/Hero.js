@@ -42,10 +42,10 @@ const Hero = () => {
   return (
     <div>
       <section className="text-gray-500 body-font">
-        <div className="container mx-auto mb-20 flex px-5 pt-4 md:pt-24 md:flex-row flex-col items-center">
+        <div className="container mx-auto mb-20 flex px-5 pt-4 md:pt-16 md:flex-row flex-col items-center">
           <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mx-auto relative">
             <Image
-              className="object-cover object-center rounded filter-jens   motion-safe:animate-fadeIn"
+              className="object-cover object-center rounded filter-jens motion-safe:animate-fadeIn"
               alt="hero"
               layout="intrinsic"
               priority
@@ -55,7 +55,7 @@ const Hero = () => {
               src="/img/jleuchters-transparent.webp"
             />
             <div className="mx-auto h-1 w-52 sm:w-96 bg-newtelco-500 rounded motion-safe:animate-fadeIn -mt-2"></div>
-            <div className="mt-4 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
+            <div className="mt-2 md:mr-8 motion-safe:animate-fadeIn flex flex-col justify-center items-center">
               <h2 className="text-3xl text-gray-200 font-semibold">
                 Jens Leuchters
               </h2>
@@ -68,7 +68,14 @@ const Hero = () => {
             <h1 className="title-font sm:text-5xl text-4xl mb-4 font-semibold text-white">
               {heroText.title}
             </h1>
-            <p className="mb-8 leading-relaxed max-w-xl">{heroText.subtitle}</p>
+            <div className="mb-8 leading-relaxed max-w-xl">
+              <span className="border-b-4 border-newtelco-500">
+                {heroText.subtitle && heroText.subtitle.split(".")[0]}.
+              </span>
+              <span className="mt-4">
+                {heroText.subtitle && heroText.subtitle.split(".")[1]}
+              </span>
+            </div>
             <button
               className="inline-flex text-white bg-newtelco-500 border-0 py-4 px-6 focus:outline-none hover:bg-newtelco-600 rounded text-lg transition transition-colors duration-200 ease-in-out focus:outline-none focus:ring focus:ring-white focus:ring-opacity-70 rounded"
               onClick={() => toggleModal(true)}

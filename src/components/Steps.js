@@ -12,6 +12,14 @@ const Steps = () => {
   return (
     <section className="text-gray-500 body-font">
       <div className="container px-5 py-8 md:py-24 mx-auto flex flex-wrap">
+        <div className="flex flex-wrap w-full mb-20">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+            <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
+              Our Process
+            </h1>
+            <div className="h-1 w-20 bg-newtelco-500 rounded"></div>
+          </div>
+        </div>
         <div className="flex flex-wrap w-full">
           <div className="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
             <div className="flex relative pb-12">
@@ -130,10 +138,9 @@ const Steps = () => {
                 </svg>
               </div>
               <div className="flex-grow pl-4">
-                <h2 className="font-medium title-font text-md text-white mb-1 tracking-wider">
-                  FINISH
+                <h2 className="font-medium title-font text-xl text-white tracking-wider">
+                  Keine sorgen für Sie!
                 </h2>
-                <p className="leading-relaxed text-xl">Keine sorgen für Sie!</p>
               </div>
             </div>
           </div>
