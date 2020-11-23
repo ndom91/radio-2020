@@ -48,8 +48,8 @@ export default function handler(req, res) {
         personalizations: [
           {
             to: [
-              // { email: "marketing@newtelco.de" },
-              // { email: "jleuchters@newtelco.de" },
+              { email: "marketing@newtelco.de" },
+              { email: "jleuchters@newtelco.de" },
               { email: "ndomino@newtelco.de" },
             ],
             dynamic_template_data: {
