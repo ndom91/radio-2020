@@ -30,7 +30,7 @@ const Hero = () => {
   const toggleModal = (val) => {
     setOpenModal(val)
     if (val) {
-      window.gtag("event", "screen_view", { screen_name: "contact-modal" })
+      window.gtag("event", "open contact modal")
       document.body.classList.add("overflow-hidden")
     } else {
       document.body.classList.remove("overflow-hidden")
