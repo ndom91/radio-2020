@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { useClickAway } from "react-use"
 import Alert from "./Alert"
@@ -6,6 +6,8 @@ import Alert from "./Alert"
 const ContactModal = ({ toggleModal }) => {
   const [agbAgree, setAgbAgree] = useState(false)
   const [openSentAlert, setOpenSentAlert] = useState(false)
+  const [modalSent, setModalSent] = useState(false)
+  const [sentText, setSentText] = useState("Absenden")
   const modalRef = useRef(null)
   useClickAway(modalRef, () => {
     toggleModal(false)
@@ -36,6 +38,15 @@ const ContactModal = ({ toggleModal }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
+  useEffect(() => {
+    if (modalSent) {
+      setSentText("Gesendet!")
+      setTimeout(() => {
+        toggleModal(false)
+      }, 5000)
+    }
+  }, [modalSent])
+
   const handleSubmit = () => {
     if (agbAgree) {
       fetch("/api/contact", {
@@ -49,15 +60,16 @@ const ContactModal = ({ toggleModal }) => {
       })
         .then((res) => res.json())
         .then((data) => {
+          console.log(data)
           if (data.code === 200) {
-            showAlert("Success", "Info successfully sent")
             setFormData({
               name: "",
               email: "",
               phone: "",
               msg: "",
             })
-            toggleModal(false)
+            // showAlert("Success", "Info successfully sent")
+            setModalSent(true)
           } else {
             showAlert("Error", "Info unsuccessfully sent")
           }
@@ -136,9 +148,10 @@ const ContactModal = ({ toggleModal }) => {
                   type="text"
                   id="name"
                   name="name"
+                  disabled={modalSent}
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin disabled:bg-gray-800"
                 />
               </div>
               <div className="relative mb-2">
@@ -152,9 +165,10 @@ const ContactModal = ({ toggleModal }) => {
                   type="email"
                   id="email"
                   name="email"
+                  disabled={modalSent}
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin disabled:bg-gray-800"
                 />
               </div>
               <div className="relative mb-2">
@@ -168,9 +182,10 @@ const ContactModal = ({ toggleModal }) => {
                   type="tel"
                   id="phone"
                   name="phone"
+                  disabled={modalSent}
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 text-base outline-none text-gray-900 py-1 px-3 leading-8 transition-colors font-thin disabled:bg-gray-800"
                 />
               </div>
               <div className="relative mb-2">
@@ -183,9 +198,10 @@ const ContactModal = ({ toggleModal }) => {
                 <textarea
                   id="msg"
                   name="msg"
+                  disabled={modalSent}
                   value={formData.msg}
                   onChange={handleChange}
-                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 h-24 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors font-thin"
+                  className="w-full bg-gray-200 rounded border border-gray-500 focus:border-newtelco-500 h-24 text-base outline-none text-gray-900 py-1 px-3 resize-none leading-6 transition-colors font-thin disabled:bg-gray-800"
                 ></textarea>
               </div>
               <div className="relative flex flex-wrap justify-between">
@@ -217,7 +233,7 @@ const ContactModal = ({ toggleModal }) => {
                   }}
                   className="text-white bg-newtelco-500 border-0 w-full py-2 px-2 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 hover:bg-newtelco-600 rounded text-lg transition-colors"
                 >
-                  Absenden
+                  {sentText}
                 </button>
               </div>
             </form>
